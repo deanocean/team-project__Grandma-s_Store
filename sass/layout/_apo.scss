@@ -1,0 +1,76 @@
+#Apo{
+    width: 100%;
+    overflow: hidden;
+    // outline: 1px solid red;
+    img{
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 15%;
+        vertical-align: bottom;
+        z-index: 250;
+        filter: drop-shadow(1px 1px 10px rgb(0, 0, 0));
+        cursor: pointer;
+    }
+    .rwdapo{
+        display: none;
+    }
+    .apobox{
+        // display: none;
+        opacity: 0;
+        width: 350px;
+        height: 130px;
+        border-radius: 10px;
+        background-color: $blue;
+        position: fixed;
+        bottom: 0;
+        right: -50%;
+        // right: 200px;
+        z-index: 4;
+        transition: 1s;
+        display: flex;
+        align-items: center;
+        .apospeak{            
+            width: 290px;
+            // height: 130px;
+            border-radius: 10px;
+            // background-color: $red;
+            font-family: $font-type2;
+            font-weight: 700;
+            font-size: $font-3;
+            color:$skin;
+            margin-left:15px;
+
+            // text-align: center;
+            line-height: 1.5;
+
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    #Apo{
+        img{
+            width: 25%;
+        }
+        .computerapo{
+            display: none;
+        }
+        .rwdapo{
+            display: inline-block;
+        }
+        .apobox{
+            display: none;
+            // width: 310px;
+            // height: 80px;
+            // .apospeak{            
+            //     width: 280px;
+            //     height: 80px;
+            //     font-family: $font-type2;
+            //     font-size: $font-4;
+            //     line-height: 80px;;
+    
+            // }
+        }
+    }
+}

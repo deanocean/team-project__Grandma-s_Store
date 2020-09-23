@@ -1,0 +1,28 @@
+$radius: 10px;
+$btn-w:100px;
+$btn-h:35px;
+
+
+
+@include rwd(md){
+
+    .btn{
+        &:hover
+        {
+            background-color: $blue;
+        }        
+    }
+}
+
+.btn{
+    background-color: $red;
+    border: none;
+    font-family: $font-type1;
+    font-size: $font-4;
+    color: $skin;
+    border-radius: $radius;
+    width: $btn-w;
+    height: $btn-h;
+    cursor:pointer;    
+    transition: background-color .5s;
+}

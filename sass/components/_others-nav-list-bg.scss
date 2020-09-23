@@ -1,0 +1,32 @@
+@mixin listbg {
+    position: relative;
+    z-index: 2;
+    .hoverbg{        
+        color: $red;
+    }
+    .list-img{
+        position: absolute;
+        width: 115%;
+        top:0;
+        left:-10px;
+        z-index: -1;
+    }
+}
+.list-bg{
+    @include listbg();
+ }
+ 
+ @media screen and (max-width:767px){
+    .list-bg{
+        .list-img{
+            // display: none;
+            position: absolute;
+            width: 50%;
+            top:-5px;
+            left:0;
+            right:0;
+            margin: auto;
+            z-index: -1;
+        }
+     }
+ }

@@ -1,0 +1,1373 @@
+// *{
+//     outline: 2px solid red;
+// }
+
+
+//<=767
+@include rwd(sm){
+    // #cust .flipbook-viewport,.filmroll,.filmroll2 {
+    //     display: none; 
+    // }
+    // #cust .mobileCust{
+    //     display: block;
+    // }
+    // #cust{
+    //     width: 100%;
+    //     height: unset;
+    //     position: relative;
+    //     background-image: url(../img/custImg/classroom.png);
+    //     background-size: cover;
+    //     text-align: center;
+    // }
+}
+//>=768
+@include rwd(md){
+    // #cust .flipbook-viewport,.filmroll,.filmroll2 {
+    //     display: none;
+    // }
+    // #cust .mobileCust{
+    //     display: block;
+    // }
+    // #cust{
+    //     width: 100%;
+    //     height: unset;
+    //     position: relative;
+    //     background-image: url(../img/custImg/classroom.png);
+    //     background-size: cover;
+    //     text-align: center;
+    // }
+}
+// =<1200
+@include rwd(lgbelow){
+    .lineheight{
+        line-height: 25px;
+    }
+    #cust .flipbook-viewport,.filmroll,.filmroll2 {
+        display: none; 
+    }
+    #cust .mobileCust{
+        display: block;
+    }
+    // #preloading{
+    //     display: none;
+    // }
+    // .custProduct{
+    //     position: static;
+    // }    
+    .smallThreeBag{
+        width: 32%;
+        display: inline-block;
+        img{
+            width: 100%;
+        }
+        span{
+            display: block;
+            margin-top: 10px;
+        }        
+
+    }
+    .fontWeight{
+        font-weight: 900;
+    }
+    #cust{
+        
+        width: 100%;
+        height: unset;
+        position: relative;
+        background-image: url(../img/custImg/classroom.png);
+        background-size: cover;
+        text-align: center;
+   
+
+        .step1,.step2,.step3,.step4{
+            background-color: rgba(255,255,255,.4);
+            margin-bottom: 40px;
+        }
+        .step2,.step3,.step4{
+            display: none;
+        }
+        .step1234{
+            width: 90%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin: auto;
+        }
+        .step1234none{
+            display: none;
+        }
+        .step1234block{
+            display: block;
+        }
+        .btn{
+            margin: 25px auto;
+        }
+        #mobbtns{
+            // position: absolute;
+            right: 0%;
+            bottom: 10%;
+            width: 100%;
+            font-size: 0;
+            i{
+                width: 50px;
+                font-size: 35px;
+                color: $blue;
+                cursor: pointer;
+                &#mobclockwiseReverse{
+                    transform: rotateY(180deg);
+                }
+                &.fa-plus-square,&.fa-minus-square{
+                    font-size: 40px;
+                }
+                &.fa-trash-alt{
+                    font-size: 38px;
+                }            
+            }
+        }
+        #mobcustBagName2{
+            font-size: $font-3;
+            padding-top: 20px;
+        }        
+        .step1,.step2,.step3,.step4{
+            border: 1px solid white;
+            border-radius: 5px;
+            p{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-size: $font-p;
+                font-family: $font-type1;
+            }
+        }
+        .step1{
+            #mobputWord2{
+                border: none;
+                font-family: "kangxi";
+                font-size: 14px;
+                background-color: $blue;
+                border-radius: 10px;
+                width: 15%;
+                height: 30px;
+                cursor: pointer;
+                transition: background-color .5s;
+            }
+        }
+        .step2{
+            .step2Button{
+                width: 120px;
+            }
+            .textform{
+                padding-top: 20px;
+            }
+            .custChoose{
+                width: 100%;
+                img{
+                    width: 30%;
+                }
+            }
+            #mobbtns{
+                margin-top: 20px;
+            }
+            span{
+                font-family: $font-type1;
+                font-size: $font-p;
+            }
+            label{
+                width: 80%;
+                height: 100%;
+                display: block;
+                margin: auto;
+                margin-top: 20px;
+                border: 2px solid #ccc;
+                border-radius: 5px;
+            }
+            button{
+                margin:10px;
+            }
+            #mobputWord{
+                border: none;
+                font-family: "kangxi";
+                font-size: 14px;
+                background-color: $blue;
+                border-radius: 10px;
+                width: 15%;
+                height: 30px;
+                cursor: pointer;
+                transition: background-color .5s;
+            }
+            #mobmyWord{
+                padding-top: 5px;
+                padding-bottom: 5px;
+                width: 100px;
+                border-radius: 5px;
+            }
+        }
+
+
+
+        .step3{
+
+            .big-img>div {
+                display: none;
+            }
+            .big-img .active{
+                display: block;
+            }
+            button{
+                margin:10px;
+                white-space: nowrap;
+                width: unset;
+            }
+            .btnsmall{
+                border: none;
+                background-color: #d53e23;
+                font-family: $font-type1;
+                font-size: 20px;
+                white-space: nowrap;
+                color: #e5dccb;
+                border-radius: 10px;
+                width: 35%;
+                height: 35px;
+                cursor: pointer;
+                transition: background-color .5s;
+                margin: 10px 10px;
+            }
+            .flexBright2{
+                background-color: $blue;
+            }              
+
+
+        }
+        .step4{
+            img{
+                width: 60%;
+            }
+            span{
+                font-family: $font-type1;
+            }
+            
+        }
+        .step4finall{
+            width: 30%;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            display: inline-block;
+            vertical-align: top;
+            a{
+                text-decoration: none;
+                color: #fff;
+                display: block;
+            }
+            span{
+                margin-top: 15px;
+                display: block;
+            }
+        }
+
+ 
+    }    
+    .dropzoneContent{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // vertical-align: bottom;
+        #mobdropzoneContent1,#mobdropzoneContent2,#mobdropzoneContent3{
+            // width: 100%;
+            // height: 100%;
+            width: 30%;
+            position: relative;
+            top:50%;
+            left: 30%;
+            cursor: move;
+            // display: inline-block;
+      
+            // transform: translate(-50%, -50%);            
+            #dropzoneContentimage1{
+                position: relative;
+                display: inline-block;
+                top: 50%;
+                z-index: 4;
+                font-size: $font-1;
+                cursor: move;                
+            }
+        }
+        #dropzoneContent2,#dropzoneContent3{
+            top: 50%;
+        }
+        // img{
+        //     &#image{
+        //     position: relative;
+        //     top: 50%;
+        //     z-index: 2;
+        //     cursor: move;
+        //     }
+        //     &#image2{
+        //     position: relative;
+        //     top: 50%;
+        //     z-index: 3;
+        //     cursor: move;
+        //     }            
+        // }
+
+    }      
+
+
+    
+
+}
+
+
+
+//>=1200
+@include rwd(xl){
+    // .flipbook{
+    //     display: none;
+    // }
+    #cust{
+        // letter-spacing: 2px;
+        width: 100%;
+        height: 100vh;
+        position: relative;        
+        background-image: url(../img/custImg/classroom.png);
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+        text-align: center;
+        .plzchoose{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 44%;
+            h4{
+            font-family: $font-type1;
+            font-size: $font-p;
+            // margin-left: -94px;
+            // margin-bottom: 10px;
+
+            }
+            // bottom: 0;
+        }
+    }    
+    #cust .flipbook-viewport,.filmroll,.filmroll2 {
+        display: block;
+    }  
+    #cust .mobileCust{
+        display: none;
+    }
+    #cust #footer{
+        position: absolute;
+        z-index: 4;
+    }
+    #cust {
+        h2{
+            font-size: $font-1;
+            padding-top: 15px;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 1400px){
+    #cust{
+        .filmroll,.filmroll2{
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//手機版
+#cust{
+
+    img{
+        vertical-align: bottom;
+    }
+    .mobileCust{
+        width: 100%;
+        background-color: rgba(0, 0, 0, .6);
+        color: #fff;
+        .publicStep{
+            padding-top: 100px;
+            padding-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;    
+            .publicStepInside{
+                width: 100px;
+                position: relative;      
+                img{
+                    width: 100%;
+                    vertical-align: bottom;
+                }
+            }
+            .publicStepLine{
+                width: 50px;
+                filter: drop-shadow(1px 1px 5px rgba(255, 255, 255,.8));
+                img{
+                    width: 100%;
+                    vertical-align: bottom;
+                }
+            }            
+        }    
+        .publicStep{
+            width: 100%;
+            height: 110px;
+        }
+        #mobdropzone{
+            position: relative;
+            width: 100%;
+        }
+        .custProduct{
+            position: relative;
+            width: 50%;
+            height: 40%;
+            left: 0;
+            right: 0;
+            // position: -webkit-sticky;
+            // position: sticky;
+            // top: 60px;
+            // padding-top: 25px;
+            margin: auto;
+            p{
+                font-size: $font-lg;
+                font-family: $font-type1;
+            }
+            img{
+                width: 100%;
+                // filter: drop-shadow(2px 2px 1px #fff);
+                &#mobimage{
+                    width: 50%;
+                    position: relative;
+                    top: 50%;
+                }
+            }   
+        }
+
+        // .smallThreeBag{
+        //     width: 100%;
+        //     display: inline-block;
+        //     span{
+        //         display: inline-block;
+        //         margin-top: 10px;
+        //     }
+        // }
+
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//背景圖
+#cust{
+    #putWord3{
+        margin-left: 10px;
+    }
+    .nowrap{
+        white-space: nowrap;
+    }
+    .m-t-20{
+        margin-top: 30px;
+    }
+    .inline-block{
+        display: inline-block;
+    }
+    .f-s-20{
+        font-size: 20px;
+    }
+
+
+    //翻滾效果
+    .filmroll{
+        height:1200px;
+        overflow: hidden;
+        position: absolute;
+        left:0;
+        top:0;
+        background-color: black;
+    }
+    .filmroll2{
+        height:1200px;
+        overflow: hidden;
+        position: absolute;
+        right:0;
+        top:0;
+        background-color: black;
+    }    
+    .ann2{
+        overflow:hidden;
+        height: 1000px;
+        width: 250px;
+    }
+    .ann3{
+        overflow:hidden;
+        height: 250px;
+        img{
+            width: 100%;
+        }
+    } 
+    //翻書設定
+    .flipbook{
+        position: relative;
+    }
+    .flipbook-viewport{
+        // transform: perspective(300px) rotateX(10deg);
+        // overflow:hidden;
+        width:100%;
+        height:100%;
+        transition: .5s;
+    }
+
+    .flipbook-viewport .container{
+        position:absolute;
+        top:50%;
+        left:50%;
+        margin:auto;
+    }
+
+    .flipbook-viewport .flipbook{
+        // width:922px;
+        // height:600px;
+        left:-461px;
+        top:-300px;
+        z-index: 99;
+    }
+
+    .flipbook-viewport .page{
+        // width:461px;
+        // height:600px;
+        background-color:white;
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+    }
+
+    .flipbook .page{
+        box-shadow:0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .flipbook-viewport .page img{
+        margin:0;
+    }
+
+    .flipbook-viewport .shadow{
+        box-shadow:0 0 20px #ccc;
+    }
+
+    //內容設定
+    .leftGuide{
+        position: absolute;
+        bottom: 15px;
+        left: 10px;
+        color: $red;       
+        font-family: $font-type1;
+        font-size: $font-3;
+        cursor: pointer;
+
+        &:hover{
+            color: $blue;
+        }
+    }
+    .bagmoney{
+        position: absolute;
+        // display: inline-block;
+        bottom: 10%;
+        left:0;    
+        right: 0;    
+        font-size: $font-1;
+        // left: 50%;
+        span{
+        font-family: $font-type1;
+
+        }
+    }
+    #myWord{
+        // background-color: rgba(132, 26, 79, 0.4);
+        border: 2px solid grey;
+        border-radius: 5px;
+    }
+    #putWord{
+        border: none;
+        font-family: "kangxi";
+        font-size: 14px;
+        color: #e5dccb;
+        border-radius: 10px;
+        width: 50px;
+        height: 30px;
+        cursor: pointer;
+        transition: background-color .5s;
+    }
+    .rightGuide{
+        position: absolute;
+        bottom: 15px;
+        right: 10px;
+        color: $red;
+        font-family: $font-type1;
+        font-size: $font-3;
+        &.btn{
+            color: $skin;
+            width: 140px;
+            padding: 5px;
+            // padding: 5px 20px 20px 5px;
+            // padding-top: 10px;
+            // padding-left: 20px;
+            // padding-right: 20px;
+            &:hover{
+                color: $skin;
+            }
+        }
+        cursor: pointer;
+        &:hover{
+            color: $blue;
+        }
+
+        
+    }
+    .booktitle{
+        position: absolute;
+        top:15%;
+        left:50%;
+        font-size: $font-4;
+        font-family: $font-type1;
+        transform: translate(-50%, -50%);
+    }
+    .bookname,.bookname2{
+        position: absolute;
+        top:70%;
+        left:50%;
+        font-size: $font-4;
+        font-family: $font-type1;        
+        transform: translate(-50%, -50%);
+    }
+    .bookname2{
+        top: 75%;
+    }
+    .addClearClass{
+        // filter: brightness(150%);
+        border: 1px solid blue;
+    }
+    .threeBag h4{
+        margin-bottom: 20px;
+        font-size: 20px;
+    }    
+    .nameBag{
+        font-size: $font-3;
+        font-family: $font-type1;
+        margin-bottom: 10px;
+        // padding-top: 20px;
+        display: block;
+        color: $red;
+    }
+    .custBagName1{
+        border:2px grey solid;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 12px;
+    }
+    .content{
+        position: absolute;
+        z-index: 100;
+        top: 10%;
+        left: 25px;
+        right: 0;
+        margin: auto;
+        font-family: 微軟正黑體;
+        p{
+            font-family: $font-type1;
+            // padding-top: 15px;
+            padding-bottom: 33px;
+            font-size: $font-p*2;
+            // color: #841A4F;
+            color: $red;
+            
+        }
+        h3{
+            // margin-bottom: 10px;
+            font-size: $font-p;
+            span{
+                // color: #841A4F;
+                color: $red;
+                font-weight: 900;
+                font-size: $font-p;
+                font-family: $font-type1;
+            }
+        }
+        .contenth3{
+            text-align: left;
+            margin: auto;
+            width: 50%;
+            h4{
+                margin-top: 75px;
+            }
+        }
+    }
+
+
+    .flipbook .threeBag{
+        // cursor: pointer;
+        position: absolute;
+        display: inline-block;
+        width: 85%;
+        bottom: 7%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        .smallThreeBag{
+            width: 30%;
+            display: inline-block;
+            span{
+                display: inline-block;
+                margin-top: 10px;
+                font-family: $font-type1;
+                font-size: $font-p;
+            }
+        }
+        img{
+            width: 100%;
+            vertical-align: bottom;
+            cursor: pointer;
+
+        }
+    }
+
+
+    .bigBag{
+        position: absolute;
+        width: 80%;
+        top:43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h2{
+            font-size: $font-1;
+        }
+        img{
+            width: 100%;
+            vertical-align: bottom;
+
+        }
+    }
+    .flipbook .textform{
+        position: absolute;
+        width: 80%;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .flipbook .custChoose{
+        position: absolute;
+        width: 80%;
+        bottom: 25%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: rgba(132, 26, 79,.4);
+        border-radius: 5px;
+
+        img{
+            width: 30%;
+            cursor: pointer;
+        }
+
+    }
+    .chooseStamp{
+        position: absolute;
+        top: 50%;
+        left: 70px;
+        // right: 0;
+    }
+    .flipbook label{
+        width: 370px;
+        // height: 50px;
+        line-height: 30px;
+        // outline: 2px solid $blue;
+        // border: 2px solid $blue;
+        border-radius: 5px;
+        position: absolute;
+        bottom: 10%;   
+        left: 10%;
+        background-color: rgba(132, 26, 79, 0.4);
+        cursor: pointer;
+    }
+
+
+    #dropzone{
+        position: absolute;
+        width: 80%;
+        // height: 100%;
+        top:43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h2{
+            font-size: $font-1;
+        }
+        img{
+            width: 100%;
+        }
+
+    }
+    .forClip{
+        width: 100%;
+        height: 100%;
+    }    
+    .clip0{
+        -webkit-mask-image: url(../img/custImg/images/big/tour_1black.png);
+        mask-image: url(../img/custImg/images/big/tour_1black.png);
+
+    }
+    .clip1{
+        -webkit-mask-image: url(../img/custImg/images/big/tour_2black.png);
+        mask-image: url(../img/custImg/images/big/tour_2black.png);
+    }
+    .clip2{
+        -webkit-mask-image: url(../img/custImg/images/big/tour_3black.png);
+        mask-image: url(../img/custImg/images/big/tour_3black.png);
+    }
+    .clip0,.clip1,.clip2{
+        mask-size:auto 100%;
+        mask-repeat: no-repeat;
+        mask-position: center center; 
+        -webkit-mask-size:auto 100%;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center center; 
+    }
+    .chooseContentTextTitle p{
+        font-family: $font-type1;
+        font-size: $font-p;
+        padding-top: 25px;
+    }
+    .chooseContentText{
+        font-family: $font-type1;
+    }
+    #content{
+        font-family: $font-type1;
+    }
+    .dropzoneContent{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // vertical-align: bottom;
+        #dropzoneContent1,#dropzoneContent2,#dropzoneContent3{
+            // width: 100%;
+            // height: 100%;
+            width: 30%;
+            position: relative;
+            top:50%;
+            left: 30%;
+            cursor: move;
+            // display: inline-block;
+      
+            // transform: translate(-50%, -50%);            
+            #dropzoneContentimage1{
+                position: relative;
+                display: inline-block;
+                top: 50%;
+                // width: 100%;
+                z-index: 4;
+                // font-size: $font-1;
+                font-size: 2vw;
+                cursor: move;       
+                // width: 100%;
+                white-space: nowrap;         
+            }
+        }
+        #dropzoneContent1{
+            width: 10%;   
+        }
+        #dropzoneContent2,#dropzoneContent3{
+            top: 35%;
+        }
+        // img{
+        //     &#image{
+        //     position: relative;
+        //     top: 50%;
+        //     z-index: 2;
+        //     cursor: move;
+        //     }
+        //     &#image2{
+        //     position: relative;
+        //     top: 50%;
+        //     z-index: 3;
+        //     cursor: move;
+        //     }            
+        // }
+
+    }
+    label{
+        font-family: $font-type1;
+    }
+    #bagcanvas{
+        position: absolute;
+        top: 15%;
+        right: 18%;
+
+    }
+    #confirmCustResult{
+        position: absolute;
+        bottom: 6%;
+        left: 40%;
+
+    }
+    #btns{
+        position: absolute;
+        right: 0%;
+        bottom: 15%;
+        width: 100%;
+        font-size: 0;
+        i{
+            width: 50px;
+            font-size: 35px;
+            color: $blue;
+            cursor: pointer;
+            &.fa-plus-square,&.fa-minus-square{
+                font-size: 40px;
+            }
+            &.fa-trash-alt{
+                font-size: 38px;
+            }
+            &#clockwiseReverse{
+                transform: rotateY(180deg);
+            }
+        }
+    }
+
+    .finalCust{
+        position: absolute;
+        bottom: 75px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 60%;
+        img{
+            width: 100%;
+        }
+    }
+    .tab{
+        button{
+            width: 70px;
+            margin: 5px;
+        }
+    }
+    .tabcontent{
+        margin-top: 10px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+        flex-wrap: wrap;
+
+    }
+
+    .flex{
+        width: 100px;
+        display: inline-block;
+        position: relative;
+        
+        cursor: pointer;
+        img{
+            width: 100%;
+        }
+        span{
+            display: inline-block;
+        }
+    }
+         .nonefountion{
+            pointer-events: none;
+        }
+    .flexBright{
+        // filter: drop-shadow(0px 0px 8px rgb(2, 108, 247));
+        // filter: drop-shadow(0px 0px 8px rgb(86, 219, 243));
+        &:after{
+            content:"";
+            display: block;
+            // border-image: url(../img/3_wangzhimian.png);
+            background-color: rgba(255, 255, 255,.8);
+            background-image: url(../img/custImg/icon/nike2.png);
+            background-position: center;
+            background-size: cover;
+
+            position: absolute;
+            // position: relative;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        // background-image: url(../../images/cd104.png);
+        // filter: opacity(30%);
+   
+    }
+    .onlyForBlock{
+        &:after{
+            content:"";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+
+        }
+    }
+    .addToCart{
+        .btn{
+            margin: 5px;
+            width: 120px;
+        }
+    }
+    .chooseContentImg{
+        margin-top: 20px;
+    }
+
+
+
+
+    //臨時購物車
+    #skin{
+        border:1px solid #ccc;
+        width:1200px;
+        margin:20px auto;
+    }
+    
+    #newItem{
+        // border-right:1px solid #999; 
+        width: 315px;
+        height: 200px;
+        // float:left;
+        margin:15px;
+        margin-bottom: 0;
+        padding:10px 10px 0 10px;
+        display: inline-block;
+        // outline: 2px solid black;
+        border: 2px solid black;
+        border-radius: 5px;
+        
+
+
+    }
+    // #subtotal{
+    //         display: none;
+    // }
+    #content{
+        // border-right:1px solid #999; 
+        width:300px;
+        display: inline-block;
+        // margin:15px;
+        // padding:10px;
+        font-size: $font-3;
+    }
+    #shopButton{
+         /*border:1px solid red; */
+        width:300px;
+        height:220px;
+        float:left;
+        margin:15px;
+        padding:10px;
+    }
+    // img{
+    //     width:252px;
+    // }
+    .cartProcess{
+        border:1px solid maroon;
+        border-radius:5px;
+        padding:5px;
+        cursor:pointer;
+        color:maroon;
+    }
+    a{
+        // color:maroon;
+        text-decoration:none;
+    }
+    .addButton{
+        // border:1px solid maroon;
+        border-radius:5px;
+        padding:1px 3px;
+        cursor:pointer;
+        color:maroon;
+    }
+    
+    #newItem img{
+        width: 200px;
+        float: left;
+    }
+    #newItem span{
+        /*border:1px solid maroon;*/
+        display: block;
+        margin: 8px;
+        margin-top: 25px;
+        font-size: 25px;
+    }
+    .flipbook .info{
+        margin-top: 70px;
+        // vertical-align: middle;
+        h3{
+            font-size: $font-1;
+            font-family: '微軟正黑體';
+            margin: 20px auto;
+        }
+        p{
+            font-family: $font-type1;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-size: $font-p*2.5;
+            color: #841A4F;
+            
+        }
+
+        .infoBtn{
+            display: block;
+            margin: 20px auto;
+        }
+
+    }
+    // .arrowLeft{
+    //     position: relative;
+    // }
+    // .arrowL{
+    //     position: absolute;
+    //     font-size: 20px;
+    //     z-index: 999;
+    //     top: 20%;
+    //     left: 2%;
+    // }
+
+
+
+
+
+
+    .backcover{
+        width: 90%;
+        height: 65%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100px;
+        margin: auto;
+        >img{
+            width: 63%;
+        }
+        a{
+            text-decoration: none;
+            text-align: left;
+            color: black;
+            &:hover{
+                color:$red;
+            }
+        }
+        i{
+            font-size: 30px;
+            // font-family: $font-type1;
+            margin-top: 25px;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            &:hover{
+                color:$red;
+            }
+        }
+        .backcoverlink{
+            margin: auto;
+            width: 60%;
+            img{
+                width: 20%;
+            }
+            span{
+            font-family: $font-type1;
+
+            }
+        }
+
+
+    }
+
+
+.odometer.odometer-auto-theme, .odometer.odometer-theme-default {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+}
+.odometer.odometer-auto-theme .odometer-digit, .odometer.odometer-theme-default .odometer-digit {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-spacer, .odometer.odometer-theme-default .odometer-digit .odometer-digit-spacer {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  visibility: hidden;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner, .odometer.odometer-theme-default .odometer-digit .odometer-digit-inner {
+  text-align: left;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon, .odometer.odometer-theme-default .odometer-digit .odometer-ribbon {
+  display: block;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-ribbon-inner, .odometer.odometer-theme-default .odometer-digit .odometer-ribbon-inner {
+  display: block;
+  -webkit-backface-visibility: hidden;
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-value, .odometer.odometer-theme-default .odometer-digit .odometer-value {
+  display: block;
+  -webkit-transform: translateZ(0);
+}
+.odometer.odometer-auto-theme .odometer-digit .odometer-value.odometer-last-value, .odometer.odometer-theme-default .odometer-digit .odometer-value.odometer-last-value {
+  position: absolute;
+}
+.odometer.odometer-auto-theme.odometer-animating-up .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-up .odometer-ribbon-inner {
+  -webkit-transition: -webkit-transform 2s;
+  -moz-transition: -moz-transform 2s;
+  -ms-transition: -ms-transform 2s;
+  -o-transition: -o-transform 2s;
+  transition: transform 2s;
+}
+.odometer.odometer-auto-theme.odometer-animating-up.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-up.odometer-animating .odometer-ribbon-inner {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.odometer.odometer-auto-theme.odometer-animating-down .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-down .odometer-ribbon-inner {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.odometer.odometer-auto-theme.odometer-animating-down.odometer-animating .odometer-ribbon-inner, .odometer.odometer-theme-default.odometer-animating-down.odometer-animating .odometer-ribbon-inner {
+  -webkit-transition: -webkit-transform 2s;
+  -moz-transition: -moz-transform 2s;
+  -ms-transition: -ms-transform 2s;
+  -o-transition: -o-transform 2s;
+  transition: transform 2s;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.odometer.odometer-auto-theme, .odometer.odometer-theme-default {
+  font-family: "Helvetica Neue", sans-serif;
+  line-height: 1.1em;
+}
+.odometer.odometer-auto-theme .odometer-value, .odometer.odometer-theme-default .odometer-value {
+  text-align: center;
+}
+
+
+
+
+
+    // #svg1{
+    //     width: 100%;
+    // }
+
+        .svgnone{
+            display: none;
+        }
+        canvas{
+            display: none;
+        }
+        
+        .canvas-disnone{
+            display: none;
+        }
+
+
+}
+#cust{
+    #preloading{
+        opacity: 0;
+        transition: opacity 1s;
+        transition-delay:opacity 1s;
+    }   
+    .owlOut{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .owlLeft{
+        width: 5%;
+        cursor: pointer;
+    }
+    .owlMiddle{
+        width: 90%;
+    }
+    .owlRight{
+        width: 5%;
+        cursor: pointer;
+    }
+}
+
+

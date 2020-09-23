@@ -1,0 +1,226 @@
+
+
+.hometitle{
+    user-select: none;
+    position: relative;
+    top: 110px;
+    margin: auto;
+    margin-bottom: 150px;
+    padding: 10px;
+    width: 140px;
+    border-radius: 5px;
+    text-align: center;
+    color: $title-yellow;
+    background-color: $title-red;
+    font-size: $font-2;
+    line-height: 1;
+    box-shadow: 0px 0px 0px 10px $title-yellow;
+    z-index: 3;
+}
+
+// .home-section .light1{
+//     animation: titlelight 1s 0s ease infinite alternate;
+// } 
+
+// .home-section .light2{
+//     animation: titlelight 1s 0s ease infinite alternate-reverse;
+// } 
+
+
+.home-section .title-circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+}
+
+$circle: -10px;
+
+@mixin circlelight($min, $max, $dir, $move){
+
+    @if $dir == top{
+        $a:0;
+        @for $i from $min through $max{
+            $a: $a+1;
+            .home-section .circle#{$i}{
+                @if $i%2 == 0{
+                    animation: titlelight 1s 0s ease infinite alternate;
+                }
+                @else{
+                    animation: titlelight 1s 0s ease infinite alternate-reverse;
+                }
+                left: ($a*11)+%;
+                top: $move;
+                @content;
+            }
+        }
+    }
+
+    
+    @else if $dir == bottom{
+        $a:0;
+        @for $i from $min through $max{
+            $a: $a+1;
+            .home-section .circle#{$i}{
+                @if $i%2 == 0{
+                    animation: titlelight 1s 0s ease infinite alternate;
+                }
+                @else{
+                    animation: titlelight 1s 0s ease infinite alternate-reverse;
+                }
+                left: ($a*11)+%;
+                bottom: $move;
+                @content;
+            }
+        }
+    }
+
+        
+    @else if $dir == left{
+        $a:0;
+        @for $i from $min through $max{
+            $a: $a+1;
+            .home-section .circle#{$i}{
+                @if $i%2 == 0{
+                    animation: titlelight 1s 0s ease infinite alternate;
+                }
+                @else{
+                    animation: titlelight 1s 0s ease infinite alternate-reverse;
+                }
+                left: $move;
+                top: ($a*20)+%;
+                @content;
+            }
+        }
+    }
+
+        
+    @else if $dir == right{
+        $a: 0;
+        @for $i from $min through $max{
+            $a: $a+1;
+            .home-section .circle#{$i}{
+                @if $i%2 == 0{
+                    animation: titlelight 1s 0s ease infinite alternate;
+                }
+                @else{
+                    animation: titlelight 1s 0s ease infinite alternate-reverse;
+                }
+                right: $move;
+                top: ($a*20)+%;
+                @content;
+            }
+        }
+    }
+}
+
+
+@include circlelight(1,8,top,-10px);
+@include circlelight(9,12,right,-10px);
+@include circlelight(13,20,bottom,-10px);
+@include circlelight(21,24,left,-10px);
+
+// .home-section .circle1{
+//     left: $circle;
+//     top: 10%;
+// }
+
+// .home-section .circle2{
+//     left: 5%;
+//     top: $circle;
+// }
+
+// .home-section .circle3{
+//     left: 15%;
+//     top: $circle;
+// }
+
+// .home-section .circle4{
+//     left: 25%;
+//     top: $circle;
+// }
+
+// .home-section .circlex{
+//     left: 35%;
+//     top: $circle;
+// }
+
+
+// .home-section .circle5{
+//     left: 45%;
+//     top: $circle;
+// }
+
+// .home-section .circle6{
+//     left: 55%;
+//     top: $circle;
+// }
+
+// .home-section .circle7{
+//     left: 65%;
+//     top: $circle;
+// }
+
+// .home-section .circle7-1{
+//     left: 75%;
+//     top: $circle;
+// }
+
+// .home-section .circle7-2{
+//     left: 85%;
+//     top: $circle;
+// }
+
+// .home-section .circle7-3{
+//     left: 95%;
+//     top: $circle;
+// }
+
+// .home-section .circle8{
+//     top: 10%;
+//     right: $circle;
+// }
+
+// .home-section .circle9{
+//     top: 65%;
+//     right: $circle;
+// }
+
+// .home-section .circle10{
+//     right: 5%;
+//     bottom: $circle;
+// }
+
+// .home-section .circle11{
+//     right: 20%;
+//     bottom: $circle;
+// }
+
+// .home-section .circle12{
+//     right: 35%;
+//     bottom: $circle;
+// }
+
+// .home-section .circle13{
+//     left: 5%;
+//     bottom: $circle;
+// }
+
+// .home-section .circle14{
+//     left: 20%;
+//     bottom: $circle;
+// }
+
+// .home-section .circle15{
+//     left: 35%;
+//     bottom: $circle;
+// }
+
+// .home-section .circle16{
+//     left: $circle;
+//     top: 65%;
+// }
+
+
+

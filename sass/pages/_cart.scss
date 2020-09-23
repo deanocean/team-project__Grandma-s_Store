@@ -1,0 +1,396 @@
+//步驟
+#cart .stepOut{
+    display: flex;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;    
+    .step{
+        width: 100px;
+        margin:auto 50px;
+        position: relative;      
+        img{
+            vertical-align: bottom;
+            width: 100%;
+        }
+    }
+    .cartline{
+        width: 50px;
+        filter: drop-shadow(1px 1px 5px rgb(0, 0, 0));
+        img{
+            vertical-align: bottom;
+            width: 100%;
+        }
+    }
+}
+
+//估價單
+// body{
+//     height: 100%;
+// }
+.clickbtn{
+    color: $skin;
+    padding: 10px 20px;
+    background-color: $red;
+    border-radius: 10px;
+}
+#cart{
+    text-align: center;
+    .valuationlist{
+        display: inline-block;
+        box-shadow: 1px 1px 10px  rgba(0,0,0,.5);
+        margin: 30px auto 100px auto;
+        background-color: #fff;
+        border-radius: 10px;
+        color:$skin;
+        padding: 20px 50px;
+        box-sizing: border-box;
+        min-height: 428px;
+        // margin-bottom: -100px;
+    }
+    h2{
+        font-family: $font-type1;
+        font-size: $font-1;
+        padding: 10px;
+        color:$blue;
+    }
+    .shopdate{
+        display: flex;
+        justify-content: space-evenly;
+        p{
+            font-family: $font-type1;
+            font-size: $font-3;
+            padding: 10px;
+            color: $blue;
+            span{
+                padding:0 5px;
+            }
+        }
+        .clientname{
+            font-family: $font-type2;
+            font-weight: 800;
+        }
+        .titleweight{
+            font-weight: 500;
+            font-family: $font-type1;
+        }
+    }
+    .tableMoney{
+        font-size: $font-3;
+        font-weight: 600;
+        margin: auto;
+        margin-bottom: 10px;
+        border-color: $blue;
+        font-family: $font-type2;
+        td,th{
+            border: 2px solid #aaa;
+            padding:10px;
+            vertical-align:middle;
+        }
+        th{
+            background-color: $blue;
+        }
+        .productdata{
+            color: $blue;
+        }
+        .cartimg{
+            width: 80px;
+            img{
+                vertical-align: bottom;
+                width: 100%;
+            }
+        }
+        .finalprice{
+            color: $red;
+        }
+        #coupon{
+            font-size: $font-3;
+            padding: 5px 10px;
+            margin: 0 20px;
+        }
+        .count_product{
+            text-align: center;
+            li{
+                float: left;
+                font-size: 0;
+            }
+            .minus,.plus{
+                font-size: $font-3;
+                width: 30px;
+                height: 30px;
+                background-color: #aaa;
+                cursor: pointer;
+                user-select: none; 
+                line-height: 1;
+            }
+            .productqty{
+                width: 30px;
+                height: 24px;
+                text-align: center;
+                font-size: $font-4;
+                line-height: 1px;
+                letter-spacing: 0px;
+            }
+        }
+
+
+        .bluecolor{
+            color:$blue;
+            th{
+                background-color: #fff;
+            }
+            td{
+                text-align: left;
+            }
+            input{
+                width: 100%;
+                height: 30px;
+                font-size: $font-3;
+            }
+            .couponcenter{
+                text-align: center;
+            }            
+        }
+        .middle{
+            text-align: center;
+            .select{
+                cursor: pointer;
+                user-select: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            input{
+                width: 30px;
+                margin: 0 5px;
+                &:checked+.color{
+                    color:$red;
+                }
+            }
+        }
+        .finalinfo{
+            color:$blue;
+            background-color: #fff;
+            p{
+                margin: 20px 0;
+            }
+        }
+    }
+    .cartbtn{
+        text-align: right;
+        .btn{
+            margin: 10px;
+        }
+    }
+    .cartbtn2{
+        text-align: center;
+        .btn{
+            margin: 10px 100px;
+        }
+    }
+
+}
+
+//桌子
+@mixin woodHeight {
+    height: 20px;
+}
+
+.table{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom:-10px;
+    .money{
+        position: absolute;
+        left: 45px;
+        bottom: 77px;
+    }
+    .wood1{
+        @include woodHeight();
+        width: 95%;
+        margin: auto;
+        background-color: #7C5C4D;
+    }
+    .wood2{
+        @include woodHeight();
+        width: 93%;
+        margin: auto;
+        background-color: #68473C;
+    }
+    .wood3{
+        @include woodHeight();
+        width: 90%;
+        margin: auto;
+        background-color: #8D6F53;
+    }
+    .wood4{
+        @include woodHeight();
+        width: 90%;
+        margin: auto;
+        background-color: #7C5C4D;
+    }
+}
+.cart #footer{
+    position: relative;
+    bottom:-10px;
+}
+
+
+
+@media screen and (max-width:767px){
+    #cart .stepOut{
+        .step{
+            width: 60px;
+            margin:0 10px;  
+        }
+        .cartline{
+            width: 30px;
+        }
+    }
+    #cart{
+        .valuationlist{
+            padding: 20px 10px;
+            width: 360px;
+        }
+        .shopdate{
+            p{
+                padding: 5px;
+                font-size: $font-p;
+            }
+        }
+        .tableMoney{
+            .count_product{
+                .productqty{
+                    box-sizing: border-box;
+                    width: 45px;
+                    height: 30px;
+                    border-radius: 0px;
+                    border: 1px solid #aaa;
+                }
+            }
+            #coupon{
+                margin: 0 5px 0 0 ;
+            }
+            .productdata{ 
+                display: flex;
+                flex-wrap: wrap;
+                font-size: $font-4;
+                border:2px solid #aaa;
+                border-top:none;
+                td:first-child{
+                    display: none;
+                }
+                .w-full{
+                    width: 100%;
+                }
+                .w-half{
+                    width: 50%;
+                    padding:20px 10px;
+                    box-sizing: border-box;
+                }
+                .count_position{
+                    width: 55%;
+                }
+                .productprice{
+                    width: 45%;
+                }
+                .productdel{
+                    padding-left:0px; 
+                }
+                .btn{
+                    width: 80px;
+                    margin-top: -20px;
+                }      
+            }
+            .rwdnoshow{
+                display: none;
+            }
+            thead{
+                display: none;
+            }
+            th{
+                display: block;
+            }
+            tr{
+                display: block;
+                border-top:none;
+                margin-bottom: 20px;
+            }
+            td{
+                display: block;
+                text-align: left;
+                border:none;
+                &:before{
+                    content: attr(data-title) ' : ';
+                    display: inline-block;
+                    // padding-right: 5px;
+                }
+            }
+            td + td{
+                border-top: 2px solid #aaa;
+            }
+            .count_position{
+                position: relative;
+                .count_product{
+                    position: absolute;
+                    top:20px;
+                    left:65px;                
+                }
+            }
+            .bluecolor{
+                text-align: left;
+                border:2px solid #aaa;
+                input{
+                    font-size: $font-p;
+                    // width: 300px;
+                    margin: 10px 5px;
+                }
+                th{
+                    display: inline-block;               
+                }          
+                &.rwd-c-data{
+                    .rwdnoshow{
+                        display: none;
+                    }     
+                    th{
+                        border:none;  
+                        padding:10px 0 0 10px;
+                        width: 5em;
+                    }
+                    td{
+                        text-align: left;
+                        font-size: $font-4;
+                        padding: 10px 10px 10px 7px;
+                        display: inline-block; 
+                        &:before{
+                            content: attr(data-title);
+                        }
+                    }
+                }
+            }
+            .middle{
+                border:none;
+                text-align: center;
+                th{
+                    width: 140px;
+                    margin:5px;
+                    padding-left: 0px;
+                }
+            }
+        }
+        .cartbtn2{
+            .btn{
+                margin: 10px 20px;
+                width: 125px;
+            }
+        }
+        .rwdfonttitle{
+            font-size: $font-2;
+        }
+        .totalMoney{
+            font-size: $font-4;
+        }
+    }    
+
+}

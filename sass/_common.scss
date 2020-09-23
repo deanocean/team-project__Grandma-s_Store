@@ -1,0 +1,19 @@
+// 共用設定區
+
+
+//變數、顏色、reset、字型
+@import "base/color";
+@import "base/typography";
+@import "base/variables";
+
+
+//排版用
+@import "modules/rwd";
+@import "modules/grid";
+
+
+//函式庫
+@import "mixins/mixins";
+
+
+

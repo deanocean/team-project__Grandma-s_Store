@@ -1,0 +1,1119 @@
+//變數
+$lh-1:40px;
+$lh-2:30px;
+$lh-3:20px;
+
+
+
+//所有的 p及span 為微軟正黑體
+#event p,#event span{
+    // line-height: 1.3;
+    font-family: $font-type2;
+}
+
+
+
+//======================event.html (活動主頁) css
+    #event-body{
+        background-color: $skin;
+        background-image: url(../img/x-ray-bg.png);
+        background-size: cover;
+        font-family: $font-type2;
+        *{
+        box-sizing: border-box;
+        }     
+        #footer{
+            position: unset;
+        }
+    }
+
+
+    .eventdata{
+        p{
+            font-family: $font-type1;
+        }
+    }
+
+    .frame{
+        max-width: 1200px;
+        margin: auto;
+        #launch{
+            vertical-align: middle;
+        }
+    }
+
+    @include rwd(sm){
+        #topic-pic{
+        position: relative;
+        width:100%;
+        margin:auto;
+        padding-top: 20%;
+        img{
+            margin-top: 20px;
+            width:100%;
+            max-width: 100vw;;
+            vertical-align: middle;
+            margin: auto;
+        }//img 結束
+        h1{
+            font-size: $font-1;
+            text-align: center;
+            text-shadow: 1px 1px 1px #000;
+            width: 260px;
+            height:60px;
+            position:absolute;
+            top:80%;
+            left:50%;
+            margin-left:-130px;
+        }//h1 結束
+    }//#topic-pic 結束
+    }
+    
+
+
+    @include rwd(md){
+        #topic-pic{
+        position: relative;
+        width:100%;
+        margin:auto;
+        img{
+            width:100%;
+            max-width: 100vw;;
+            vertical-align: middle;
+            margin: auto;
+        }//img 結束
+        h1{
+            font-size: 60px;
+            text-align: center;
+            text-shadow: 1px 1px 1px #000;
+            width: 260px;
+            height:60px;
+            position:absolute;
+            top:80%;
+            left:50%;
+            margin-left:-130px;
+        }//h1 結束
+    }//#topic-pic 結束
+    }
+
+//橘色分隔線
+.event-line{
+        width: 100%;
+        height: 5px;
+        background-color: $red;
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+
+
+@include rwd(md){
+    .event-line{
+        width: 100%;
+        height: 5px;
+        background-color: $red;
+        margin-top:30px;
+        margin-bottom:30px;
+    }
+
+}
+
+//下拉式選單外觀
+@include rwd(sm){
+    #event-body select{
+    // width:80px;
+    height: 26px;
+    border-radius:5px;
+    box-shadow: 2px 2px 8px 0px rgba(127,127,127,1);
+    font-size: 16px;
+    }
+
+    #event-body option{
+        font:$font-type2 bold ;
+        color:#000;
+    }
+}
+
+
+@include rwd(md){
+    #event-body select{
+    // width:100px;
+    height:30px;
+    border-radius:5px;
+    }
+
+    #event-body option{
+        font-family:$font-type2;
+        font-weight: bold;
+        color:#000;
+    }
+}
+
+
+//創立活動區域按鍵區
+
+@include rwd(sm){
+    .hold-act{
+    margin:20px 0px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    display:flex; 
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    h2,label{
+        font-family: $font-type1;
+        color:$blue;
+        font-size: $font-p;
+        margin-bottom:20px;
+        
+    }//h2 結束
+
+}//.hold-act 結束
+
+
+.act-group{
+    display: flex;
+    justify-content: center;
+}
+
+.act-type,.act-shop,.act-people,.hold-act .btn{
+    // display:inline-block;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 8px;
+    align-items: center;
+}
+
+#launch{
+    margin: 20px 10px;
+}
+
+
+.act-type,.act-shop,.act-people{
+    h2{
+        font-size:  $font-3;
+
+    }
+}
+}
+
+
+@include rwd (md){
+    .hold-act{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        position: relative;
+        display:flex;  
+        justify-content: center;
+        align-items: center;
+        
+        h2,label{
+            color:$blue;
+            font-size: $font-1;
+            margin-bottom:20px;
+            font-family: $font-type1;
+        }
+        
+    }
+    .act-type,.act-shop,.act-people,.hold-act .btn{
+        display:inline-block;
+        margin: 0px 20px;
+    }
+    
+    .act-type{
+        margin-left: 50px;
+    }
+
+    .act-shop{
+        margin-left: 0px;
+    }
+
+    .act-people{
+        margin-left: 0px;
+        margin-right: 20px;
+        text-align: center;
+        :nth-child(n){
+            vertical-align: middle;
+        }
+    }
+
+
+}
+
+//篩選活動區域
+.sort{
+    float: right;
+    line-height:$lh-1;
+    display:flex;
+    h4,select,label{
+        color: $blue;
+        font-size: 12px;
+        display:inline-block;
+        margin: 5px;
+        margin-top:10px;
+        // vertical-align: center;
+    }
+
+    &:after{
+        clear: both;
+        margin-left:-50px;
+    }
+    
+}
+
+
+
+@include rwd(md){
+    .sort{
+        color: $blue;
+        display:inline-block;
+        margin: 5px;
+        vertical-align: center;
+        
+        h4,label{
+            display:inline-block;
+            vertical-align: center;
+            font-size: $font-3;
+        }
+        select{
+            display:inline-block;
+            vertical-align: center;
+            font-size:18px;
+        }
+    }
+    
+}
+
+
+
+
+//==========eventInfo.html(活動內頁)css===========
+
+//內頁第一屏簡介
+.event-detail{
+    padding-top:100px; 
+    .pic{
+        width: 100%;
+        img{
+            display: block;
+            max-width: 100%;
+            margin:auto;
+        }
+        &:after{
+            clear:both;
+        }
+    }
+    .text{
+        position: relative;
+        padding: 20px;
+        color: $blue;
+        h2{
+            font-size:$font-1;
+            line-height: $lh-1;
+            margin-top:20px;
+            background-image: url(../../img/nav-hover.png);
+            background-repeat:no-repeat;
+            background-size: cover;
+            background-position: center;       
+        }
+        p{
+            font-size: $font-p;
+            line-height:$lh-2;
+            margin: 20px 0; 
+        }
+        span{
+            display: block;
+            font-size:$font-p;
+            margin: 20px 0;
+        }
+        .btn{
+            margin-left:70%;
+           &:after{
+               clear:both;
+           } 
+        }
+    }
+}
+
+
+@include rwd (md){
+    .event-detail{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .pic{
+            // background-image: url(../img/event-frame.png);
+            // background-repeat: no-repeat;
+            // background-position: center;
+            background-size:cover;
+            img{
+                // border: 26px solid $red;
+                border-style: groove;
+                // max-width: 400px;
+            }
+        }
+        
+        .text{
+            margin: 40px;
+        }
+    }
+}
+
+
+.event-intro{
+        margin-top: 20px;
+        padding: 20px;
+        color: $blue;
+        border-top: 5px solid $blue;
+    h2{
+        font-size:$font-3;
+        line-height: $lh-1;
+        margin: 10px 0px;
+
+    }
+    p{
+        font-size:$font-p;
+        line-height: 2;
+        // margin: 10px 0px;
+    }
+    .event-time{
+        span{
+        display: block;
+        font-size: $font-p;
+        margin: 20px 0;
+        }
+    }
+
+}
+
+@include rwd(md){
+    .event-intro{
+        margin: 40px;
+        color: $blue;
+        
+    h2{
+        font-size:$font-1;
+        line-height: $lh-1;
+        margin: 10px 0px;
+ 
+    }
+    p{
+        font-size:$font-p;
+        line-height: 2;
+        margin: 20px 0px;
+    }
+    .event-time{
+        // display: flex;
+        // justify-content: space-evenly;
+        span{
+        display: block;
+        // margin: 20px;
+        font-size: $font-p;
+        // margin: 10px;
+        }
+    }
+
+}
+
+}
+
+
+
+.event-info-line{
+        width: 100%;
+        height: 5px;
+        background-color: $blue;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+
+
+//===========留言評論=========
+.cmt{
+    box-sizing: border-box;
+}
+
+.cmt-title{
+        font-size:$font-1;
+        text-align: center;
+        margin: 20px 0px;
+        color: $blue;
+
+}
+  
+  .profile{
+    float: left;
+    position: relative;
+  }
+  
+  .profile-pic {
+    border-radius: 65px;
+    width: 60px;
+    height: 60px;
+    display: block;
+    position: absolute;
+    top: 30px;
+
+    img{
+        max-width: 60px;
+    }
+  }
+  
+  .commentContent{
+    font-size:20px;
+    margin: 0px 20px 10px 90px;
+    padding: 10px;
+    color: $skin;
+    background-color: $blue;
+    border-radius: 10px;
+    min-height: 130px;
+    position:relative;
+    padding-bottom:35px;
+    span {
+        margin-left: 35px; 
+    }
+    p{
+        margin: 10px 0 10px 35px;
+    }
+    .time{
+        position: absolute;
+        font-size:14px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .report{ 
+        position: absolute;
+        border-radius:0px 10px 0px 10px;
+        width: 80px;
+        top:0;
+        right:0;
+    }
+}
+  
+  .commentContent:before{
+    content: "";
+    display: block;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 20px 24px 20px 0;
+    border-color: transparent $blue transparent transparent;
+    position: absolute;
+    left: -24px;
+    top: 50px;
+    }
+  
+  .commentContent:after{
+    content: "";
+      display: block;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width:24px 30px 24px 0;
+      border-color: transparent $blue transparent transparent;
+      position: absolute;
+      left:-21px;
+      top:46px;
+      z-index: 0;
+  }
+  
+  
+
+
+  @include rwd(md){
+    .profile{
+    float: left;
+    position: relative;
+  }
+  
+  .profile-pic {
+    border-radius: 65px;
+    width: 60px;
+    height: 60px;
+    display: block;
+
+    img{
+        max-width: 60px;
+    }
+  }
+  
+  .commentContent{
+    font-size:20px;
+    margin: 0px 20px 30px 90px;
+    padding: 25px;
+    color: $skin;
+    background-color: $blue;
+    border-radius: 10px;
+    min-height: 130px;
+    position:relative;
+    box-sizing: border-box;
+    p{
+        margin-top: 35px;
+        margin-left:35px;
+    }
+    .time{
+        position: absolute;
+        font-size:14px;
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .report{
+        // font-size:20px;
+        // border-radius:5px;
+        // margin-left:60%; 
+        position: absolute;
+        border-radius:0px 10px 0px 10px;
+        width: 60px;
+        top:0;
+        right:0;
+    }
+}
+  }
+
+
+
+
+
+
+//發表留言
+.post-cmt{
+    // margin: auto;
+    background-color: $blue;
+    border-radius:$radius;
+    margin:20px;
+    padding-top: 20px;
+    // position: relative;
+    
+    textarea{
+        width: 90%;
+        // height: 60%;
+        // padding: 10px;
+        // border:1px solid #fff;
+        margin: 0 auto 20px auto;
+        border-radius: 10px;
+        resize: none;
+        display: block;
+    }//textarea 結束
+}
+
+#send{
+     width:100%;
+     border-radius: 0px 0px 10px 10px;
+     margin-bottom: 0px;
+}
+
+@include rwd(md){
+    .post-cmt{
+        position: relative;
+        height: 140px;
+
+    }
+
+    textarea{
+        width: 60%;
+        height:55px;
+        padding: 10px;
+        border:1px solid #fff;
+        margin:20px;
+        resize:none;
+    }//textarea 結束
+
+    #send{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width:20%;
+    border-radius: 10px 0px 10px 0px;
+    margin-bottom: 0px;
+    }
+}
+
+
+//其他活動
+ .other-title{
+        font-size:$font-1;
+        text-align: center;
+        margin: 50px 0px;
+        color: $blue;
+
+    }
+
+.hvr-glow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}
+
+.hvr-glow:hover, .hvr-glow:focus, .hvr-glow:active {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+
+@include rwd (md){
+    .other-events{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    .other-card{
+        background-color:#fff;
+        border-radius:10px; 
+        padding:10px;
+        margin:20px 10px;
+        &:hover{
+        opacity: 1;
+	    -webkit-animation: flash 1.5s;
+        animation: flash 1.5s;
+        cursor: pointer;
+        }
+
+    img{
+        width:100%;       
+    }
+
+    h4{
+        color:$blue;
+        font-size: $font-3;
+        margin: $lh-3;
+    }
+
+    p{
+        margin: $lh-3;
+        line-height: 1.5;
+        color: $blue;
+    }
+    
+    span{
+        display: block;
+        margin: 0px 20px;
+        color: $blue;
+        line-height: 1.75;
+    }
+
+    }//.other-card end
+}//.other-events end
+}//@include rwd (md)
+
+
+
+@include rwd (sm){
+    .other-events{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+    margin-bottom: 50px;
+    .other-card{
+        background-color:#fff;
+        border-radius:10px; 
+        // width:100%;
+        padding:10px;
+        margin:20px 0;
+    img{
+        width:100%;
+    }
+
+    h4{
+        color: $blue;
+        margin: $lh-3;
+    }
+
+    p{
+        color: $blue;
+        margin: $lh-3;
+        line-height: $lh-2;
+    }
+    
+    span{
+        display: block;
+        margin: $lh-3;
+        color: $blue;
+    }
+
+    }//.other-card end
+}//.other-events end
+}//@include rwd (sm) end
+
+
+
+#show-launch h2 {
+    text-align: center;
+}
+
+
+#show-launch{ //建立活動填寫表單內容
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    z-index: 100;
+    left: 0;
+    top: 60px;
+    background-color: $blue;  
+    
+    .act-group{
+        h2{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        }
+    }
+
+    h2{
+        font-size: $font-p;
+        // $font-4;
+        color: $skin;
+        margin: 20px 10px;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+
+    p{
+        font-size: 16px;
+        color: $skin;
+        text-align: center;
+    }
+
+    h6{
+        margin: 10px 20px;
+        margin-bottom: 0px;
+        color: $skin;
+        font-size: 18px;
+    }
+
+    .user-evt-dtl{
+        padding: 0px 30px;
+    }
+    
+    #user-evt-name{
+        border: 1px solid $skin;
+        border-radius: 5px; 
+        height: 30px;
+        margin: 2px 20px;
+        box-shadow: 2px 2px 8px 0px #7f7f7f;
+        // opacity: 0.5;
+        font-family: kanxi;
+        font-size: $font-p;
+        
+    }
+
+    #user-evt-name::-webkit-input-placeholder { 
+        font-size: $font-p;
+        font-family: kangxi;
+    }
+
+    #user-evt-intro{
+        width: 90%;
+        margin: 2px 20px;
+        border-radius: 5px; 
+        height: 26px;
+        box-shadow: 2px 2px 8px 0px #7f7f7f;
+        // opacity: 0.5;
+        font-family: kangxi;
+        font-size: $font-p;
+    }
+
+    #user-evt-intro::-webkit-input-placeholder { 
+        font-size: $font-p;
+        font-family: kangxi;
+    }
+
+    #user-evt-date{
+        margin: 2px 20px;
+        border-radius: 5px; 
+        height: 26px;
+        box-shadow: 2px 2px 8px 0px #7f7f7f;
+        // opacity: 0.5;
+        font-family: kangxi;
+        font-size: $font-p;
+    }
+
+    .user-pic-select{
+        margin: 0 20px;
+        color:#fff;
+    }
+
+    .user-evt-pic{
+        
+        .selected-pic {
+        display: inline-block;
+        width: 150px;
+        max-height: 100px;
+        text-align: center;
+        vertical-align: top;
+        position: relative;
+        bottom: 10px;
+        left: 30px;
+        }
+    }
+
+
+    #pic-choose{
+        border: 1px solid $skin;
+        border-radius: 5px;
+        height: 26px;
+        margin: 10px 20px;
+    }
+
+    #launch-ok{
+        display: block;
+        text-align: center;
+        margin: auto;
+    }
+
+
+}
+
+.close-show-launch{ //關閉輸入表單按鈕
+    display: none;
+    background-color: transparent;
+    color: $skin;
+    z-index: 25;
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    font-size: $font-1;
+    cursor: pointer;
+    position: relative;
+    right: 70px;
+    bottom: 50px;
+}
+
+#user-evt-name,
+#user-evt-intro,
+#user-evt-date{
+    padding-left: 10px;
+}
+
+
+
+@include rwd(md){
+#show-launch{
+   
+    h2{
+        font-size: $font-p;
+        // $font-4;
+        color: $skin;
+        margin: 20px 10px;
+        text-align: center;
+    }
+
+    p{
+        font-size: $font-p;
+        color: $skin;
+        text-align: center;
+    }
+
+    h6{
+        margin: 20px;
+        margin-bottom:0px;
+        color: $skin;
+        font-size: $font-3;
+    }
+
+    .user-evt-dtl{
+        padding: 0px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+    
+    #user-evt-name{
+        border: 1px solid $skin;
+        border-radius: 5px; 
+        height: 30px;
+        margin: 2px 20px;
+        box-shadow: 2px 2px 8px 0px #7f7f7f;
+        // opacity: 0.5;
+        font-family: kanxi;
+        font-size: $font-p;
+        
+    }
+
+    #user-evt-name::-webkit-input-placeholder { 
+        font-size: $font-p;
+        font-family: kangxi;
+    }
+
+    #user-evt-intro{
+        width: 90%;
+        margin: 2px 20px;
+        border-radius: 5px; 
+        height: 30px;
+        box-shadow: 2px 2px 8px 0px #7f7f7f;
+        // opacity: 0.5;
+        font-family: kangxi;
+        font-size: $font-p;
+    }
+
+    #user-evt-intro::-webkit-input-placeholder { 
+        font-size: $font-p;
+        font-family: kangxi;
+    }
+
+    #user-evt-date{
+        margin: 2px 20px;
+        border-radius: 5px; 
+        height: 30px;
+        box-shadow: 2px 2px 8px 0px #7f7f7f;
+        // opacity: 0.5;
+        font-family: kangxi;
+        font-size: $font-p;
+    }
+
+    .user-pic-select{
+        margin: 0 20px;
+        color:#fff;
+    }
+
+    .user-evt-pic{
+        
+        .selected-pic {
+        display: inline-block;
+        width: 280px;
+        max-height: 180px;
+        border-radius: 5px;
+        text-align: center;
+        vertical-align: top;
+        }
+    }
+
+
+    #pic-choose{
+        border: 1px solid $skin;
+        border-radius: 5px;
+        height: 26px;
+        margin: 10px 20px;
+    }
+
+    #launch-ok{
+        display: block;
+        text-align: center;
+        margin: auto;
+        margin-top: 10px; 
+    }
+}
+
+}
+
+@include rwd(md){
+    #show-launch{ //建立活動填寫表單內容
+    padding-top: 60px;
+    display: none;
+    position: fixed;
+    width: 500px;
+    height: 800px;
+    border-radius: 10px; 
+    z-index: 100;
+    left: 50%;
+    top: 50%;
+    background-color: $blue;  
+    margin-left: -250px;
+    margin-top: -400px;
+    
+     h2{
+        font-size: $font-3;
+        color: $skin;
+        margin: 20px 10px;
+        margin-bottom: 1px;
+        text-align: center;
+    }
+
+}
+
+    #user-evt-intro{
+        width: 460px;
+        border-radius: 10px; 
+    }
+}
+
+
+
+
+
+
+
+
+.show-launch-bg{ //黑色滿版背景
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 60;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0,.5);
+}
+
+.close-show-launch{ //關閉輸入表單按鈕
+    display: none;
+    background-color: transparent;
+    color: $skin;
+    z-index: 60;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: $font-1;
+    cursor: pointer;
+}
+
+.eventbtn{
+    width: 135px;
+    line-height: 35px;
+}
+
+@media screen and (max-width: 992px){
+    #show-launch{
+        z-index: 999;
+        top: 0;
+        h2{
+            font-size: 16px;
+        }
+        select{
+            height: 26px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 8px 0px #7f7f7f;
+            font-size: 16px;
+        }
+    }
+
+}
+
+#event-body{
+    #form_register{
+        box-sizing: content-box;
+    }
+}

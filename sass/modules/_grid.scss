@@ -1,0 +1,24 @@
+
+@mixin grid($device_size_style,$num){
+    @for $i from 1 through $num{
+        .col-#{$device_size_style}-#{$i}{
+            width: ($i / $num) *100%;
+            float: left;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }      
+    }    
+}
+
+@include rwd(sm){
+    @include grid(sm,12);
+}
+@include rwd(md){
+    @include grid(md,12);
+}
+@include rwd(lg){
+    @include grid(lg,12);
+}
+@include rwd(xl){
+    @include grid(xl,12);
+}

@@ -1,0 +1,1191 @@
+//產品的高度
+$prod-btm: -50px;
+
+$line-height: 1.5;
+
+//animation
+
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    20% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    40% {
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+  
+    80% {
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+  
+    to {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+//gernal setting
+.bounceIn
+{    
+    animation-duration: 0.75s ;
+    animation-name: bounceIn;
+}
+
+
+.card-select
+{
+    color: $blue;
+    background: rgba(255,255,255,.5);
+    border: transparent;
+    border-radius: 30px;
+    height: 30px;
+    font-size: $font-4;
+    font-family: $font-type1;
+    
+}
+.c-example__tilt-inner:hover .hoverBounce
+{
+    animation-duration: 0.75s ;
+    animation-name: bounceIn;
+}
+.mobile-show
+{
+    display: none;
+}
+
+// 商品主頁
+.pro-main
+{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+
+    .rank
+    {
+        display: inline-block;
+        width: 50px;
+        height: 80px;
+        line-height: 40px;
+        font-family: $font-type1;
+        font-size: 18px;
+        color: $skin;
+        position: absolute;
+        top: -10px;
+        left: -14px;
+        background: url("../img/metal.png") no-repeat top left;
+        background-size: contain;
+    }
+    .rankimg
+    {
+        background: url("../img/new.png") no-repeat top left;
+        width: 80px;
+        left: -21px;
+        top: -16px;
+    }
+    .billboard-title
+    {
+        width:90%;
+        height: 87px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 22px;
+        padding-bottom: 2px;
+        color: $blue;
+        font-family: $font-type1;
+        
+        .slogan
+        {
+            
+            color: $blue;
+            font-family: $font-type1;
+            font-size: $font-2;
+            font-weight: bold;
+            letter-spacing: 0.5vw;
+            user-select: none;
+            
+        }
+        .circle-title
+        {            
+            
+            display: flex;
+            text-align: center;
+            position: relative;
+            top: -20px;
+            margin: auto;
+            user-select: none;
+            .round
+            {
+                animation-delay: .2s;
+                background-color: #fff;
+                font-size: $font-lg;
+                font-family: $font-type1;
+                border-radius: 50%;
+                height: 80px;
+                width: 80px;
+                padding-top: 2px;
+                box-sizing: border-box;
+                border: 5px solid $red;
+                margin: 0px 5px;
+                filter: drop-shadow(2px 2px 2px #555);
+            }
+        }
+    }
+
+    // 佈告欄背景
+    .cust-board-wrap, .billboard-wrap
+    {
+        background-position: center;
+        background-size: auto;
+        background-repeat: no-repeat;
+
+    }
+    .billboard-wrap
+    {
+        background-image: url(../img/product-board.png);
+    }
+    .cust-board-wrap
+    {
+        background-image: url(../img/product-board-long.png);
+        position: relative;
+    }
+
+    .swiper-container {
+        width: 85%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        z-index: 0;
+      }
+      .swiper-slide {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 226px;
+        height: 330px;
+        box-shadow: 2px 2px 10px #777;
+        background-image: url(../img/movieboard.png);
+        text-align: center;
+        
+
+        .sli-title, .sli-price
+        {
+            font-size: $font-3;
+            font-family: $font-type1;
+            color: $red;
+            height: 73px;
+            width: 100%;
+            line-height: 73px;
+            
+            i
+            {
+                color: $red;
+                transition: color .5s;
+                cursor: pointer;
+                // &:hover
+                // {
+                //     color: $blue;
+                // }
+            }
+
+        }
+        .sli-img
+        {
+            box-sizing: border-box;
+            position: relative;
+            height: 190px;
+            
+            img
+            {
+                position: absolute;
+                margin: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        a
+        {                          
+            text-decoration: none;
+        }
+      }
+    //商品第一屏佈告欄-----------
+    //商品第一屏佈告欄-----------
+    .billboard-wrap
+    {
+        height: 535px;
+
+        //SLIDER區
+
+
+
+      //end of 商品第一屏佈告欄       
+    }
+
+    //個別卡片式商品-----------
+    //個別卡片式商品-----------
+    .pro-card-wrap
+    {
+        max-width: 1200px;
+        width: 90%;
+        margin:100px  auto;
+
+
+
+        .pro-card-tab-filter-wrap
+        {
+            display: flex;
+            justify-content: space-between;
+            .card-select
+            {
+                    width: 120px;
+            }
+            .card-tab
+            {
+                display: flex;
+
+                .all, .cookie, .candy, .drink, .toy
+                {
+
+                    height: 50px;
+                    padding: 0px 10px;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    text-align: center;
+                    font-size: $font-4;
+                    font-family: $font-type1;
+                    background-color: $red;
+                    border-radius: 10px;
+                    line-height: 50px;
+                    color: $skin;
+                    cursor: pointer;
+                    transition: background-color .5s;
+
+                    &:hover
+                    {
+                        background-color: $blue;
+                    }
+
+                }
+
+                .pro-tab-active
+                {
+                    background-color: $blue;
+                }
+            }
+        }
+        
+
+
+
+
+        .pro-many
+        {
+            .c-example__demo
+            {
+                display: flex;
+                flex-wrap: wrap;
+
+
+                .btn-container
+                {
+                    width: 100%;
+                    padding: 20px 0px;
+                    margin: auto;
+                    text-align: center;
+                    button
+                    {
+                        
+                        background-color: $red;
+                        border: none;
+                        border-radius: 10px;
+                        padding: 10px;
+                        font-family: $font-type1;
+                        font-size: 15px;
+                        color: $skin;
+                        transition: background-color .5s;
+                        cursor: pointer;
+                        
+                        &:hover
+                        {
+                            background-color: $blue;
+                        }
+                    }
+                  }
+
+                  .seemore
+                  {
+                      display: none;
+                  }
+            }
+                .c-example__tilt {
+                    margin: 30px auto;
+                    width: 226px;
+                    height: 330px;
+                    display: block;                    
+                    background-image: url(../img/movieboard.png);
+                    box-shadow: 0 3px 47px rgba(0, 0, 0, 0.2);
+                    transform-style: preserve-3d;
+                    transform: perspective(300px);
+                    transform-style: preserve-3d;
+                }
+                
+                .c-example__tilt-inner {
+                    transform: translateY(-50%) translateX(-50%);
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    text-align: center;
+                    
+                    .title, .price
+                    {
+                        height: 60px;
+                        width: 196px;
+                        font-size: $font-3;
+                        line-height: 2.8;
+                        color: $red;
+                        font-family: $font-type1;
+                        cursor: pointer;
+                        i{
+                            color: $red;
+                            transition: color .5s;
+                            cursor: pointer;
+                            // &:hover
+                            // {
+                            //     color: $blue;
+                            // }
+                        }
+                    }
+
+                    .pro-img
+                    {
+                        box-sizing: border-box;
+                        position: relative;
+                        height: 190px;
+                        z-index: 1;
+                        img
+                        {
+                            position: absolute;
+                            margin: auto;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+
+                } //end of .c-example__tilt-inner
+
+
+        }//end of  .pro-many
+
+     //end of 個別卡片式商品        
+    }
+
+    //客製化商品佈告欄-----------
+    //客製化商品佈告欄-----------
+    .cust-board-wrap
+    {
+        
+        height: 985px;
+        margin: auto;
+
+        .cust-billboard-wrap
+        {
+            width: 100%;
+            
+            .cust-billboard-title
+            {
+                display: flex;
+                margin: 50px 0px;
+                .left,.middle,.right
+                {
+                    width: 33.33333333%;
+                    text-align: center;
+                }
+                .middle
+                {
+                    
+                    .middle-title
+                    {
+                        background-color: #f4ead7;
+                        width: 250px;
+                        margin: auto;
+                        padding: 10px;
+                        border: 3px solid $blue;
+                        font-size: $font-2;
+                        font-family: $font-type1;
+                        color: $red;
+                        box-shadow: 1px 1px 10px 1px #333;
+                        user-select: none;
+                    }
+                }
+                .right
+                {
+                    a
+                    {
+                    text-decoration: none;
+                    }
+                    .btn
+                    {
+                        width: 130px;
+                        margin: 10px 0px;
+                    }
+                }
+            }
+            
+            .cust-billboard-pro-wrap
+            {
+                display: flex;
+                justify-content: space-around;
+                margin: 50px 0px;
+                .cust-billboard-pro
+                {                    
+                    text-align: center;
+                    h4
+                    {
+                        font-size: $font-4;
+                        font-family: $font-type2;
+                        font-weight: bold;
+                        margin: 10px 0px;
+                    }
+                    .cust-billboard-pro-img
+                    {
+                        width: 160px;
+                        position: relative;
+                        #nail
+                        {
+                            position: absolute;
+                            z-index: 1;
+                            top: 0;
+                            right: 45%;
+                            width: 18px;
+                        }
+
+                        img
+                        {
+                            width: 100%;
+                            filter: drop-shadow(5px 5px 5px #555);
+                        }
+
+                    }
+                    .cust-billboard-pro-win
+                    {
+                        position: relative;
+
+                        img
+                        {
+                            width: 50px;
+                            position: absolute;
+                            top: -20px;
+                            right: 0;
+                        }
+                    }
+
+                }
+
+            }
+
+        }// end of .cust-billboard-wrap
+        
+
+
+
+     //end of 客製化商品佈告欄
+    }
+
+
+
+
+ //end of 商品主頁
+}
+
+
+
+// 商品內頁----------------------
+// 商品內頁----------------------
+// 商品內頁----------------------
+// 商品內頁----------------------
+// 商品內頁----------------------
+// 商品內頁----------------------
+// 商品內頁----------------------
+// 商品內頁----------------------
+// 商品內頁----------------------
+// 商品內頁----------------------
+// 商品內頁----------------------
+// 商品內頁----------------------
+// 商品內頁----------------------
+// 商品內頁----------------------
+.pro-body
+{    
+   background-image: url(../img/x-ray-bg.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   
+#footer
+{
+    position: unset;
+}
+}
+
+//product--------------------------------------------------
+//product--------------------------------------------------
+//product--------------------------------------------------
+//product--------------------------------------------------
+//product--------------------------------------------------
+//product--------------------------------------------------
+//product--------------------------------------------------
+//product--------------------------------------------------
+//product--------------------------------------------------
+//product--------------------------------------------------
+//product--------------------------------------------------
+//product--------------------------------------------------
+.pro
+{
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 80px;
+    // overflow: hidden;
+
+}
+
+.product-info-wrap
+{ 
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+
+    .product-pic
+    {
+        width: 100%;
+        min-width: 375px;
+        height: 500px;        
+        border-style: solid;
+        border-width: 50px;
+        border-image:url(../img/8250.png) 70 round;
+        position: relative;
+        box-sizing: border-box;
+        overflow: hidden;s
+        img{
+            width: 100%;
+        }
+        #product
+        {
+            position: absolute;            
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+            width: 80%;
+        }
+    }
+    .product-info
+    {
+        
+        width: 100%;
+        color: $blue;
+        display: flex;
+        flex-direction: column;  
+        // justify-content: center;
+        line-height: 2;   
+        h3
+        {   
+            font-family: $font-type1;
+            font-size: $font-2;
+        }
+        p
+        {   
+            font-family: $font-type2;
+            font-size: $font-4;
+            span
+            {
+                color: $red;
+            }
+            #popularity
+            {
+                color: $blue;;
+            }
+            .fa-thumbs-up
+            {
+                font-size: $font-3;
+                color: $red;
+                cursor: pointer;
+            }
+            .fas
+            {
+                display:none;
+            }
+
+
+        }
+        .btn-wrap
+        {
+
+            .btn
+            {
+                margin-top: 10px;
+                margin-right: 20px;
+                width: 125px;
+            }
+            #collection
+            {
+                background-color: transparent;
+                border: 2px solid $red;
+                color: $red;
+                &:hover
+                {
+                    background-color: $blue;
+                    color: $skin;
+                    border-color: $blue;
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+//推薦您---------------------------------------------------------
+//推薦您---------------------------------------------------------
+//推薦您---------------------------------------------------------
+//推薦您---------------------------------------------------------
+//推薦您---------------------------------------------------------
+//推薦您---------------------------------------------------------
+//推薦您---------------------------------------------------------
+//推薦您---------------------------------------------------------
+//推薦您---------------------------------------------------------
+//推薦您---------------------------------------------------------
+//推薦您---------------------------------------------------------
+//推薦您---------------------------------------------------------
+//推薦您---------------------------------------------------------
+//推薦您---------------------------------------------------------
+
+
+
+
+// 轉盤推薦
+.slide
+{    
+   
+    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;  
+    padding-top:150px;  
+    h3
+    {
+        font-family: $font-type1;
+        font-size: $font-2;
+        color: $blue;
+        padding-left: 20px;
+        text-align: center;
+    }
+    .recmd-produt
+    {
+        padding-top: 20px;
+        text-align: center;
+        &:hover img
+        {
+            filter: drop-shadow(2px 2px 5px #fff);
+        }
+        &:hover p a
+        {
+            color: #fff;
+        }
+        img
+        {
+            filter: drop-shadow(2px 2px 5px $blue);
+            width: 80%;
+
+        }
+        .round-title 
+        {
+            width: 100%;
+            a
+            {
+                text-decoration: none;
+                color: $skin;
+                font-family: $font-type1;
+                font-size: $font-3;
+            }
+            
+        }
+    }
+
+
+
+    .rotating-slider{
+        margin: 5em auto;
+        height: 260px;
+        position: relative;
+        width: 280px;
+
+    }
+    .rotating-slider ul.direction-controls{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        
+    }
+    .rotating-slider ul.direction-controls li.left-arrow{
+        position: absolute;
+            top: 50%;
+            right: 100%;
+        transform: translateY(-50%);
+        
+    }
+    .rotating-slider ul.direction-controls li.right-arrow{
+        position: absolute;
+            top: 50%;
+            left: 100%;
+        transform: translateY(-50%);
+    }
+    .rotating-slider ul.direction-controls li button{
+        background: $red; 
+        border: none;
+        color: $skin; 
+        cursor: pointer;
+        font-size: 1.5em;
+        font-weight: bold;
+        height: 1.5em;
+        line-height: 1.5em;
+        padding: 0;
+        text-align: center;
+        transition: background 0.25s;
+        width: 1.5em;
+        border-radius: 5px;
+    }
+    .rotating-slider ul.direction-controls li button:hover{
+        background: $blue; 
+    }
+    .rotating-slider ul.slides{
+        border-radius: 50%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+            top: 0;
+            left: 50%;
+        transform: translateX(-50%) rotate(0);
+        transform-origin: center center;
+        width: 100%;
+        
+        background-image: url(../img/sheizhi.png);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .rotating-slider ul.slides li{
+        /* background-color: #ecf0f1; */
+        background-position: center;
+        background-size: cover;
+        display: block;
+        list-style: none;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        text-align: center;
+        transform-origin: bottom center;
+        width: 100%;
+        
+    }
+}
+
+
+.pro-footer #footer
+{
+    position: inherit;
+}
+
+.dis-n
+{
+    display: none !important;
+}
+.dis-b
+{
+    display: block;
+}
+//---------------RWD ---------------------------------
+//---------------RWD ---------------------------------
+//---------------RWD ---------------------------------
+//---------------RWD ---------------------------------
+//---------------RWD ---------------------------------
+//---------------RWD ---------------------------------
+//---------------RWD ---------------------------------
+//---------------RWD ---------------------------------
+//---------------RWD ---------------------------------
+//---------------RWD ---------------------------------
+//---------------RWD ---------------------------------
+//---------------RWD ---------------------------------
+//---------------RWD ---------------------------------
+//---------------RWD ---------------------------------
+//---------------RWD ---------------------------------
+//---------------RWD ---------------------------------
+
+@media screen and (max-width: 767px)
+{
+    .mobile-hide
+    {
+        display: none;
+    }
+    .mobile-show
+    {
+        display: block;
+    }
+    .pro{
+    .product-name
+    {
+        // text-align: center;
+        font-size: $font-2;
+        color: $blue;
+        padding: 40px 5% 10px;
+    }
+    .product-info-wrap
+    {
+        display: block;
+        margin: auto auto 100px;
+        .product-pic{
+            display: flex;
+            align-items: center;
+            height: 400px;
+            img{
+                width: 100%;
+            }
+        } 
+
+        .product-info
+        {
+            box-sizing: border-box;
+            padding: 5%;
+            .btn-wrap
+            {
+                .btn 
+                {
+                    width: 100%;
+                }
+            }
+        }
+
+        #shelf
+        {
+            height: 300px;
+        }
+
+    }
+
+    .recommend
+    {
+        padding-top: 100px;
+        .recmd
+        {
+            display: block;
+            height: auto;
+            .recmd-produt
+            {
+                margin: auto;
+                
+            }
+        }
+
+
+    }
+}
+    .pro-main
+    {
+        .billboard-title
+        {
+            width:100%;
+            height: auto;
+            .slogan
+            {
+                display: none;
+            }
+        }
+
+        .billboard-wrap
+        {
+            width:100%;
+            height: 500px;
+            background-size: cover;
+            .swiper-container
+            {
+                width: 100%;
+                padding-top: 10px;
+                padding-bottom: 40px;
+            }
+        }
+
+        
+
+
+
+
+        .pro-card-wrap
+        {
+            min-width: 375px;
+            
+            .pro-card-tab-filter-wrap
+            {
+                .card-tab
+                {
+                    flex-wrap: wrap;
+                    .all, .cookie, .candy, .drink, .toy
+                    {
+                        writing-mode: vertical-lr;
+                        line-height: normal;
+                        margin-right: 5px;
+                        margin-bottom: 0px;
+                    }
+
+                }
+
+                
+            }
+    
+    
+            .pro-many
+            {
+
+    
+                .c-example__tilt {
+                    width: 170px;
+                    height: 250px;           
+                    background-size: contain;                    
+                }
+                
+                .c-example__tilt-inner {
+                    .title, .price
+                    {
+                        width: 170px;
+                        font-size: 18px;
+                        line-height: 3.5;
+                    }
+                    
+                    .pro-img 
+                    {
+                        height: 132px;
+                        img
+                        {
+                            width: 80%;
+                        }
+                        
+                    }
+    
+    
+    
+                } //end of .c-example__tilt-inner
+    
+    
+        }//end of  .pro-many
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+    } //end of pro-main
+
+
+
+
+    .cust-board-wrap
+    {
+        
+        min-width: 375px;
+        width:100%;
+        height: 1100px;
+        background-size: cover;
+
+        .billboard-title
+        {
+            padding: 10px 20px 0px 20px;
+            box-sizing: border-box;
+            .circle-title
+            {
+                top: 0px;
+                
+                .round
+                {
+                    margin: 0px 2px;
+                }
+            }
+        }
+
+        .cust-billboard-wrap
+        {
+
+            
+            .cust-billboard-title
+            {
+                padding-top: 50px;
+                display: block;
+
+                .left,.middle,.right
+                {
+                    width: auto;
+                }
+                .middle
+                {
+                    
+                    .middle-title
+                    {
+
+                        width: 250px;
+                        padding: 10px;
+                    }
+                }
+                .right
+                {
+                    .btn
+                    {
+                        width: auto;
+                        padding: 0px 10px;
+                    }
+                }
+            }
+            
+            .cust-billboard-pro-wrap
+            {
+                
+                
+                .cust-billboard-pro
+                {                    
+                    #win
+                    {
+                        width: 40px;
+                        top: -10px;
+                    }
+                    
+                    .cust-billboard-pro-img
+                    {
+                        width: 120px;
+                        #nail
+                        {
+                            width: 10px;
+                        }
+                        img
+                        {
+                            width: 110px;
+                            
+                        }
+
+                    }
+
+
+                }
+
+            }
+
+        }// end of .cust-billboard-wrap
+        
+
+
+        .swiper-container 
+        {
+            width: 100%;
+            padding-top: 80px;
+            padding-bottom: 40px;
+        }
+
+
+
+     //end of 客製化商品佈告欄
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    } //end of pro-card-wrap
+
+ 
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// end of RWD
+}
+
+
+
+
+#custedProd{
+    position: absolute;
+    top: -100px;
+    width: 0;
+    height: 0;
+}
+
+.pro-card-tab-filter-wrap{
+    .card-tab{
+        width: 100%;
+    }
+}

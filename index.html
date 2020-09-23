@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>阿婆柑仔店</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="img/Apo/apoIcon.ico" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="css/animation.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"><!--fontawesome -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jqueryCDN -->
+    <script src="./js/plugin/parallax.js"></script><!--parallax -->
+</head>
+<body>
+    <div id="leadingOut">
+    	<div id="leadingLeft">
+            <img src="./img/leadingImg/leading-bg-left2.png" alt="doorLeft" data-depth="0.2">
+        </div>
+        <div class="textF2e" data-depth="0.2"><a href="#">前端</a></div>
+    	<div id="leadingRight">
+            <img src="./img/leadingImg/leading-bg-right2.png" alt="doorRight" data-depth="0.3">
+        </div>
+        <h1>阿婆柑仔店</h1>
+        <div class="textB2e" data-depth="0.2"><a href="#">後端</a></div>
+    </div>
+
+
+
+    <div class="rwd">
+        <div class="rwdbg">
+            <img src="./img/section1/h1bg.png" alt="" class="rwdbg1">
+        </div>
+        <div class="home-section">
+        <h1 class="hometitle">阿婆柑仔店
+                <div class="title-circle circle1"></div>
+                <div class="title-circle circle2"></div>
+                <div class="title-circle circle3"></div>
+                <div class="title-circle circle4"></div>
+                <div class="title-circle circle5"></div>
+                <div class="title-circle circle6"></div>
+                <div class="title-circle circle7"></div>
+                <div class="title-circle circle8"></div>
+                <div class="title-circle circle9"></div>
+                <div class="title-circle circle10"></div>
+                <div class="title-circle circle11"></div>
+                <div class="title-circle circle12"></div>
+                <div class="title-circle circle13"></div>
+                <div class="title-circle circle14"></div>
+                <div class="title-circle circle15"></div>
+                <div class="title-circle circle16"></div>
+                <div class="title-circle circle17"></div>
+                <div class="title-circle circle18"></div>
+                <div class="title-circle circle19"></div>
+                <div class="title-circle circle20"></div>
+                <div class="title-circle circle21"></div>
+                <div class="title-circle circle22"></div>
+                <div class="title-circle circle23"></div>
+                <div class="title-circle circle24"></div>
+            </h1>
+        </div>
+        <div class="indexbtn">
+            <a href="homepage.php" class="button font">前端</a>
+            <a href="Apobackend/backLogin.php" class="button back">後端</a>
+        </div>
+        <div class="apo">
+            <!-- <img src="img/Apo/Apo7-2.png" alt=""> -->
+            <img src="img/section2/Apo.gif" alt="">
+        </div>
+    </div>
+
+</body>
+
+<script>
+    var leadingLeft= document.getElementById('leadingLeft');
+    var parallaxInsrance = new Parallax(leadingLeft);
+    var leadingRight= document.getElementById('leadingRight');
+    var parallaxInsrance = new Parallax(leadingRight);
+</script>
+<script>
+    $('.textF2e').click(function(){
+        $('#leadingOut').css({
+            'perspective':'3000px',
+            'perspective-origin':'center center',
+        });
+        $('#leadingLeft').css({
+            'transform':'rotateY(50deg)',
+            'transition':'3s',
+            'transform-origin': 'left',
+        });
+        $('#leadingRight').css({
+            'transform':'rotateY(-50deg)',
+            'transition':'3s',
+            'transform-origin': 'right',
+        });        
+        $('.textF2e').css({
+            'transform':'rotateY(50deg) translateX(-100px)',
+            'transition':'2.5s .5s',
+            'transform-origin': 'left',
+        }); 
+        $('.textB2e').css({
+            'transform':'rotateY(-50deg) translateX(100px)',
+            'transition':'2.5s .5s',
+            'transform-origin': 'right',
+        });
+        $('h1').css({
+            'transform': 'rotateY(-50deg) translateX(100px)',
+            'transition': '2.5s .5s',
+            'transform-origin': 'right',
+        });
+        setTimeout( function(){location.href = "homepage.php"}, 3000 );
+
+    });
+    $('.textB2e').click(function(){
+        $('#leadingOut').css({
+            'perspective':'3000px',
+            'perspective-origin':'center center',
+        });
+        $('#leadingLeft').css({
+            'transform':'rotateY(50deg)',
+            'transition':'3s',
+            'transform-origin': 'left',
+        });
+        $('#leadingRight').css({
+            'transform':'rotateY(-50deg)',
+            'transition':'3s',
+            'transform-origin': 'right',
+        });        
+        $('.textF2e').css({
+            'transform':'rotateY(50deg) translateX(-100px)',
+            'transition':'2.5s .5s',
+            'transform-origin': 'left',
+        }); 
+        $('.textB2e').css({
+            'transform':'rotateY(-50deg) translateX(100px)',
+            'transition':'2.5s .5s',
+            'transform-origin': 'right',
+        });
+        $('h1').css({
+            'transform': 'rotateY(-50deg) translateX(100px)',
+            'transition': '2.5s .5s',
+            'transform-origin': 'right',
+        });           
+        setTimeout(function () { location.href = "Apobackend/backLogin.php" }, 3000);             
+    });
+</script>
+</html>

@@ -1,0 +1,104 @@
+
+<!-- NAV -->
+<!-- 漢堡 -->
+<div class="nav-burger">
+    <div class="ham"></div>
+</div>
+<div id="nav" class="show">
+    <!-- logo -->
+    <div class="nav-logo">
+        <a href="homepage.php">
+            <img src="img/navbar/logo.png" alt="Logo">
+        </a>
+    </div>
+    <!-- hover時的被景色 -->
+    <div class="bgcolor">
+        <img src="img/navbar/nav-hover.png" alt="">
+    </div>     
+    <!-- li 選單 -->
+    <div class="nav-list">
+        <div class="nav-list-font">
+            <a href="#" class="nav-product hoverbg cust">客製商品</a>
+            <div class="nav-product-list cust-p">
+                <div class="font-center"><a href="cust.php">開始客製化</a></div>
+                <div class="font-center"><a href="products-main.php?tab_btn=0#custedProd">客製化包包</a></div>
+            </div>
+        </div>
+        <div class="nav-list-font">
+            <a href="#" class="nav-product hoverbg product">商品資訊</a>
+            <div class="nav-product-list product-p">
+                <div class="font-center"><a href="products-main.php?tab_btn=tab2">糖&nbsp;&nbsp;果</a></div>
+                <div class="font-center"><a href="products-main.php?tab_btn=tab3">童&nbsp;&nbsp;玩</a></div>
+                <div class="font-center"><a href="products-main.php?tab_btn=tab4">餅&nbsp;&nbsp;乾</a></div>
+                <div class="font-center"><a href="products-main.php?tab_btn=tab5">飲&nbsp;&nbsp;料</a></div>
+                <div class="font-center"><a href="products-main.php?tab_btn=0#custedProd">客製化包包</a></div>
+            </div>
+        </div>
+        <div class="nav-list-font"><a href="event.php" class="hoverbg event">活動資訊</a></div>
+        <div class="nav-list-font"><a href="homepage.php#home5" class="hoverbg game">折扣遊戲</a></div>
+        <div class="nav-list-font"><a href="store.php" class="hoverbg store">店鋪資訊</a></div>
+        <div class="nav-list-font"><a href="faq.php" class="hoverbg faq">常見問題</a></div>
+    </div>
+    <!-- 登入及購物車 -->
+    <ul class="nav-icon">
+        <li>
+            <a id="memBtn" href="member.php"><i class="fas fa-user-circle"><span id="navMember"></span></i></a>
+        </li>
+        <li>
+            <a id="NavloginBtn">
+                <!-- <i class="fas fa-user-circle"><span id="navMember">&nbsp;</span><span id="spanLogin">登入</span></i> -->
+                <span id="spanLogin">登入</span>
+
+            </a>
+        </li>
+        <li>
+            <a href="cart.php" class="nohover">
+                <i class="fas fa-shopping-cart">
+                    <span id="cart-circle">
+                        <span id="cart-count">0</span>
+                    </span>
+                </i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<!-- 聊天機器人 -->
+
+<div class="chatrobot">
+    <div class="chatbox">
+        <div class="chatline">
+            阿婆柑仔店，歡迎搜尋如下關鍵字，可迅速解答您的問題唷~
+            <br>#營業時間<span>#活動報名</span>
+            <br>#店鋪資訊<span>#小遊戲</span>
+            <br>#問與答<span>#客製化</span>
+            <br>#找到<span>#早安</span>
+        </div>
+    </div>
+  
+    <div class="closebtn"><i class="fas fa-times-circle btnCancel" class="btnCancel"></i></div>   
+    <div class="chattext">
+        <textarea name="saymessage" class="messagebox"></textarea>
+        <!-- <input type="text" class="messagebox"> -->
+        <!-- <input type="button" class="chatbtn" value="送出"> -->
+        <div class="chatbtn">送出</div>
+    </div> 
+</div>
+
+
+<div id="loginAlert">
+    <div class="contentMsg"></div>
+</div>
+
+
+<!-- 阿婆機器人 -->
+<div id="Apo">
+    <img src="img/Apo/Apo7.png" alt="" class="computerapo">
+    <img src="img/Apo/Apo7-1.png" alt="" class="rwdapo">
+    <div class="apobox">
+        <div class="apospeak">
+            郎客阿~快來買東西喔!!
+        </div>
+    </div>
+</div>

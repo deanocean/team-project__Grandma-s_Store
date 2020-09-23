@@ -1,0 +1,66 @@
+ <!-- 20190104 -->
+<div class="show_login_light_box_bg"></div>
+<div class="show_register_light_box_bg"></div>
+
+<div class="login_section" id="form_login">
+
+    <div id="formContainer">
+       
+        <div class="form" id="login" method="post" action="./">
+            <i class="fas fa-times-circle btnCancel" id="btnCancel"></i>
+            <a href="#" id="flipToRecover" class="flipLink loginLink">忘記密碼?</a>
+            <h1>會員登入</h1>
+            <input autofocus type="text" name="loginAcount" id="loginAcount" placeholder="帳號" />
+            <input type="password" name="loginPass" id="loginPass" placeholder="密碼" />
+            <button id="btnLogin" class="btn">登入</button>
+            <div id="gotoRegister"><p>不是會員嗎?&nbsp;&nbsp;&nbsp;<a href="#" id="ShowMemberRegister" class="loginLink">立即註冊</a></p></div>  
+        </div>
+        <form class="form" id="recover" method="post" action="./"> 
+            <i class="fas fa-times-circle btnCancel" id="btnCancel2"></i>
+            <a href="#" id="flipToLogin" class="flipLink loginLink">會員登入</a>
+            <h1>重設密碼</h1>
+            <p id="recoverNote">請輸入帳號註冊時所留的電子郵件地址，以驗證您的資料</p>
+            <input type="text" name="recoverEmail" id="recoverEmail" placeholder="E-mail" />
+            <input type="password" name="recoverPsw" id="recoverPsw" placeholder="新密碼" />
+            <input type="password" name="recoverPswConfirm" id="recoverPswConfirm" placeholder="新密碼確認" />
+            <button id="pswEma" class="btn">送出</button>
+        </form>
+    </div>
+    
+</div>
+
+
+<div class="reg_form" id="form_register">
+    <i class="fas fa-times-circle btnCancel" id="btnCloseRegister"></i>
+    <h1>會員註冊</h1>
+    <form  class="form" id="submitForm" method="post" onclick="return false">
+        <div class="title_section">
+            <p class="p_note">如果您還沒成為柑仔店會員</p>
+            <p class="p_note">請填下您的個人資料，並加入一般會員。</p>
+        </div>
+        <div class="column_section">
+            <p>
+                <span class="column_name">* 帳號</span>
+                <input type="text" id="txtAccount" name="Account" size="20" class="input-330 chkDefault" placeholder="請輸入帳號" />
+            </p>
+            <p>
+                <span class="column_name">* 密碼</span>
+                <input type="password" id="txtPassword" name="Password" size="20" class="input-clear-once input-330 chkDefault" placeholder="請輸入密碼" />
+            </p>
+            <p>
+                <span class="column_name">* 確認密碼</span>  
+                <input type="password" id="txtConfirmPassword" name="ConfirmPassword" size="20" class="input-clear-once input-330 chkDefault" placeholder="請輸入確認密碼" />
+            </p>
+            <p>
+                <span class="column_name">* E-MAIL</span>
+                <input type="text" id="txtEmail" name="Email" size="30" class="input-330 chkEmail" placeholder="請輸入Email" />
+            </p>     
+        </div><!-- column_section -->
+        <div class="send_section">
+            <p class="p_note">* 為必填欄位，請填妥欄位資訊。</p>
+            <button id="btnSendMemRegData" class="btn">確定</button>
+        </div> 
+    </form>
+</div><!--class="reg_form"-->
+
+<script src="js/self/login.js"></script>

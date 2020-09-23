@@ -1,0 +1,125 @@
+#leadingOut{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: black;
+        h1{
+        position: absolute;
+        top: 29vw;
+        left: 61%;
+        width: 31vw;
+        color: aliceblue;
+        z-index: 999;
+        font-size:4vw; 
+
+    }
+}
+#leadingLeft{
+    width: 50%;
+    position: absolute;
+    left: 0;
+    img{
+        width: 100%;
+        vertical-align: bottom;
+    }
+}  
+.textF2e{
+    position: absolute;
+    font-size: 8vw;
+    letter-spacing: 1PX;
+    font-family: $font-type1;
+    top: 4vw;
+    left: 19%;
+    width: 20%;
+    white-space: nowrap;
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
+    a{
+        width: 100%;
+        height: 26vw;
+        text-decoration: none;
+        color:black;
+        display: block;
+        text-align: center;
+        line-height: 20vw;
+    }
+}
+.textB2e{
+    position: absolute;
+    font-size: 8vw;
+    letter-spacing: 1PX;
+    font-family: $font-type1;
+    top: 4vw;
+    right: 19%;
+    width: 20%;
+    white-space: nowrap;
+    -webkit-writing-mode: vertical-lr;
+    writing-mode: vertical-lr;
+    a{
+        width: 100%;
+        height: 26vw;
+        text-decoration: none;
+        color:black;
+        display: block;
+        text-align: center;
+        line-height: 20vw;
+    }
+}
+#leadingRight{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    img{
+      width: 100%;
+      vertical-align: bottom;
+    }
+}  
+.rwd{
+    display: none;
+}
+@media screen and (max-width:1200px){
+    #leadingOut{
+        display: none;
+    }
+    .rwd{
+        display: block;
+       .hometitle{
+           top:50px;
+           width:75%;
+           font-size: $font-lg;
+           padding: 30px 0px;
+       }
+    }
+    .indexbtn{
+      position: absolute;
+      width: 100%;
+      top:35%;
+      text-align: center;    
+    }
+    .button{
+        color: $skin;
+        font-family: $font-type1;
+        font-size: $font-lg;
+        padding: 10px 15px;
+        background-color: $red;
+        width: 30%;
+        border-radius: 10px;
+        display: inline-block;
+        margin: 0 20px;
+        text-align: center;
+    }
+    .apo{
+        position: fixed;
+        bottom: 0;
+        text-align: center;
+        left: 0;
+        right: 0;
+        margin: auto;
+        img{
+            // width: 40%;
+            height: 45vh;
+            vertical-align: bottom;
+        }
+    }
+}
+

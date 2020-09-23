@@ -1,0 +1,30 @@
+
+
+//共用設定
+@import "../common";
+
+//components放這裡
+@import "../components/home-title";
+@import "../components/buttons";
+@import "../components/comment";
+// @import "../components/fadeinout-carousel";
+@import "../components/others-nav-list-bg";
+@import "../components/loginAlert";
+
+
+// 統整各頁面的scss
+@import "leading";//前導頁
+@import "home-dean";//首頁
+@import "home-hao";//首頁
+@import "cust";//客製化
+@import "products";//產品
+@import "event";//活動
+@import "stores";//店鋪 
+@import "faq";//Q&A
+@import "member";//會員
+@import "cart";//購物車
+
+
+
+
+

@@ -1,0 +1,77 @@
+.chatrobot{
+    position: fixed;
+    bottom: 5px;
+    right:15%;
+    z-index: 999;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    background-color: $blue;
+    display: none;
+    .chatbox{
+        width: 250px;
+        height: 280px;
+        background-color: $skin;
+        margin: auto;
+        margin-top: 30px;
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        font-family: $font-type2;
+        overflow: auto;
+        // opacity: 0;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .customMessage{
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: $blue;
+            color:#fff;
+            text-align: left;
+            position: relative;
+        }
+        .chatline span{
+            margin-left: 20px;
+        }
+    }
+    .closebtn{
+        position: absolute;
+        top:2px;
+        right:2px;
+        font-size: $font-2;
+        color: $skin;
+        cursor: pointer;
+    }
+    .chattext{
+        width: 250px;
+        margin: 20px auto;
+        display: flex;
+        justify-content: space-around;
+        .messagebox{
+            width: 190px;
+            height: 50px;
+            box-sizing: border-box;
+            padding: 5px;
+            margin: 0px;
+            border: 0px;
+            border-radius: 10px;
+            font-size: $font-s;
+            font-family: $font-type2;
+        }
+        .chatbtn{
+            height: 50px;
+            width: 50px;
+            border:0;
+            font-size: $font-4;
+            font-family: $font-type1;
+            color: $skin;
+            border-radius: 10px;
+            background-color: $red;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+        }
+    }
+}

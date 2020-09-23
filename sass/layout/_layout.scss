@@ -1,0 +1,10 @@
+//各頁的共用區塊 ex. NavBar、Footer、Hamburger、阿婆
+
+//reset
+@import "base/reset";
+
+@import "../common";
+@import "layout/nav";
+@import "layout/footer";
+@import "layout/apo";
+@import "layout/chatrobot";

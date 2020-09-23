@@ -1,0 +1,35 @@
+//字型、文字大小
+$font-lg: 46px;
+$font-1: 36px;
+$font-2: 30px;
+$font-3: 24px;
+$font-4: 20px;
+$font-p: 18px;
+$font-s: 16px;
+$lineheight: 1.5;
+
+
+
+
+@font-face{
+	font-family:kangxi;
+	src:url(TypeLand-com-KangXiZiDianTi-ShiYongBan-1.otf);
+}
+
+$font-type1: "kangxi"; //康熙字典體  
+$font-type2: 'Microsoft JhengHei'; //微軟正黑體  
+
+body{
+	line-height: 1.5;
+	letter-spacing: 1px;
+}
+
+//所有的 h為康熙字典體
+h1, h2, h3, h4, h5, h6{
+	font-family: $font-type1;
+}
+
+//所有的 p及span 為微軟正黑體
+p, span, div{
+    font-family: $font-type2;
+}

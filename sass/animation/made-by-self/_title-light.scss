@@ -1,0 +1,4 @@
+@keyframes titlelight{
+      0%{background-color: darken($title-light,50%);}
+    100%{background-color: lighten($title-light,30%);}
+}

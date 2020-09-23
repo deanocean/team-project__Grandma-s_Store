@@ -1,0 +1,33 @@
+//判斷是否登入的跳窗
+#loginAlert{
+    display: none;
+    opacity: 1;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-weight: bold;
+    font-size: $font-3;
+    line-height: 350px;
+    cursor: pointer;
+    width: 310px;
+    height: 375px;
+    transition: .5s;
+    z-index: 999;
+    background-image: url(../img/member/comment-bg-login.png);
+    background-size: 100% 100%;
+    background-position: 50% 50%;
+    border-radius: 25px;
+    animation: pulse 2s infinite;
+    text-align: center;
+
+    .contentMsg{
+        width: 85%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        line-height: 1.5;
+    }
+}

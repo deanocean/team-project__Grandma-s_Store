@@ -1,0 +1,48 @@
+.card-carousel {
+  width: 3000px;
+  // height: 65vh;
+  // outline: 1px solid red;
+  font-size: 0;
+  position: relative;
+  margin-left: -100px;
+}
+
+.card-carousel .my-card {
+  // height: 30rem;
+  display: inline-block;
+  max-width: 330px;
+  min-width: 310px;
+  width: 30vw;
+  height: 415px;
+  position: relative;
+  vertical-align: top;
+  z-index: 1;
+  transform: scale(0.6) translateY(-2rem);
+  opacity: 0.3;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 1s;
+}
+
+// @media screen and (max-width: 1200px){
+//   .card-carousel .my-card {
+//     width: 400px;
+//   }
+// }
+
+
+.card-carousel .my-card.card-active {
+  z-index: 3;
+  transform: scale(1) translateY(0) translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  transition: 1s;
+}
+
+.card-carousel .my-card.card-prev, .card-carousel .my-card.card-next {
+  z-index: 2;
+  transform: scale(0.8) translateY(-1rem) translateX(0);
+  opacity: 0.6;
+  pointer-events: auto;
+  transition: 1s;
+}
